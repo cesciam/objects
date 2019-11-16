@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="483.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.BibliotecaMusical.ui.RegistroCliente.RegistroCliente">
+   <children>
+      <Label layoutX="37.0" layoutY="37.0" text="Nombre:" />
+      <TextField layoutX="181.0" layoutY="33.0" />
+      <TextField layoutX="181.0" layoutY="77.0" />
+      <TextField layoutX="181.0" layoutY="121.0" />
+      <Label layoutX="37.0" layoutY="81.0" text="Apellidos:" />
+      <Label layoutX="37.0" layoutY="125.0" text="Nomdre de usuario:" />
+      <TextField layoutX="181.0" layoutY="165.0" />
+      <Label layoutX="37.0" layoutY="169.0" text="Contraseña:" />
+      <TextField layoutX="181.0" layoutY="209.0" />
+      <Label layoutX="37.0" layoutY="213.0" text="Edad:" />
+      <Label layoutX="37.0" layoutY="257.0" text="País:" />
+      <ComboBox fx:id="CBpaises" layoutX="181.0" layoutY="253.0" onMouseClicked="#listarPaises" prefWidth="150.0" promptText="Seleccione un país" />
+   </children>
+</AnchorPane>

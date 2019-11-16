@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="266.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.BibliotecaMusical.ui.InicioSesion.inicioSesion">
+   <children>
+      <Button layoutX="246.0" layoutY="176.0" mnemonicParsing="false" text="Iniciar sesión" />
+      <TextField fx:id="txtUserName" layoutX="140.0" layoutY="60.0" />
+      <Label layoutX="21.0" layoutY="60.0" text="Nombre de usuario" />
+      <Label layoutX="21.0" layoutY="108.0" text="Contraseña" />
+      <Button fx:id="btnRegistro" layoutX="86.0" layoutY="176.0" mnemonicParsing="false" onAction="#registroCliente" text="Registrarse" />
+      <PasswordField fx:id="txtPass" layoutX="140.0" layoutY="104.0" />
+   </children>
+</Pane>
