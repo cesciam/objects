@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0">
-
+<?import java.net.URL?>
+<AnchorPane prefHeight="483.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.BibliotecaMusical.ui.RegistroCliente.RegistroCliente">
+   <children>
+      <Label layoutX="37.0" layoutY="37.0" text="Nombre:" />
+      <TextField fx:id="txtNombre" layoutX="181.0" layoutY="33.0" />
+      <TextField fx:id="txtApellidos" layoutX="181.0" layoutY="77.0" />
+      <TextField fx:id="txtNombreUsuario" layoutX="181.0" layoutY="121.0" />
+      <Label layoutX="37.0" layoutY="81.0" text="Apellidos:" />
+      <Label layoutX="37.0" layoutY="125.0" text="Nomdre de usuario:" />
+      <TextField fx:id="txtContrasenna" layoutX="181.0" layoutY="165.0" />
+      <Label layoutX="37.0" layoutY="169.0" text="Contraseña:" />
+      <TextField fx:id="txtEdad" layoutX="181.0" layoutY="209.0" />
+      <Label layoutX="37.0" layoutY="213.0" text="Edad:" />
+      <Label layoutX="37.0" layoutY="257.0" text="País:" />
+      <ComboBox fx:id="CBpaises" layoutX="181.0" layoutY="253.0" onMouseClicked="#listarPaises" prefWidth="150.0" promptText="Seleccione un país" />
+      <Label layoutX="395.0" layoutY="37.0" text="Avatar:" />
+      <ImageView fx:id="imagePreview" fitHeight="150.0" fitWidth="200.0" layoutX="457.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../img/Carga-01.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="674.0" layoutY="42.0" mnemonicParsing="false" onAction="#subirImgaen" text="Subir imagen" />
+      <Label layoutX="37.0" layoutY="301.0" text="Email:" />
+      <TextField fx:id="txtEmail" layoutX="182.0" layoutY="297.0" />
+      <Button layoutX="582.0" layoutY="385.0" mnemonicParsing="false" onAction="#registrarUsuario" prefHeight="53.0" prefWidth="120.0" text="Registrar" />
+      <Label layoutX="37.0" layoutY="345.0" text="Identificacion:" />
+      <TextField fx:id="txtIdentifacion" layoutX="181.0" layoutY="341.0" />
+       
+   </children>
+   <stylesheets>
+      <URL value="@demo.css" />
+   </stylesheets>
 </AnchorPane>
