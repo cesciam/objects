@@ -2,16 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/img/Carga-01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/RegistroCliente/RegistroCliente.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_48_bin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modeloBaseDeDatos.mwb.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysqljava/mysql-connector-java-5.1.48-bin.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/bl/Usuario.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/InicioSesion/inicioSesion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/InicioSesion/inicioSesion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/InicioSesion/inicioSesion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/InicioSesion/inicioSesion.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScriptSQLMusica.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ScriptSQLMusica.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeloBaseDeDatos.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/modeloBaseDeDatos.mwb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/tl/Controlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/tl/Controlador.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/RegistroCliente/RegistroCliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/RegistroCliente/RegistroCliente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/RegistroCliente/registroCliente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/RegistroCliente/registroCliente.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/InicioSesion/inicioSesion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/InicioSesion/inicioSesion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/RegistroCliente/RegistroCliente.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyectoObjetos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoObjetos.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/dl/borrar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/dl/ConeccionBD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/tl/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/tl/Controlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/RegistroCliente/RegistroCliente.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/RegistroCliente/RegistroCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/RegistroCliente/RegistroCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/RegistroCliente/registroCliente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/RegistroCliente/registroCliente.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,8 +88,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -112,11 +119,15 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mysqljava/mysql-connector-java-5.1.48-bin.jar!/" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="recentsLimit" value="5" />
   </component>
   <component name="RecentsManager">
@@ -229,7 +240,9 @@
       <workItem from="1573684198999" duration="90000" />
       <workItem from="1573684784888" duration="1011000" />
       <workItem from="1573875874080" duration="351000" />
-      <workItem from="1573876466631" duration="16210000" />
+      <workItem from="1573876466631" duration="18957000" />
+      <workItem from="1573973052402" duration="599000" />
+      <workItem from="1574021413465" duration="1015000" />
     </task>
     <servers />
   </component>

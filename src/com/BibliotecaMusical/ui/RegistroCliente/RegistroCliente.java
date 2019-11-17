@@ -1,5 +1,6 @@
 package com.BibliotecaMusical.ui.RegistroCliente;
 
+import com.BibliotecaMusical.tl.Controlador;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -95,7 +96,12 @@ public class RegistroCliente {
             alert.setContentText("Revise los campos marcados en rojo.");
             alert.show();
         }else {
-            System.out.println("No hay error");
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Registro");
+            alert.setHeaderText("Registro de cliente");
+            alert.setContentText("El usuario ha sido registrado y se envio la informacion al correo.");
+            alert.show();
+            Controlador.registrarCliente(nombre, apellidos, nombreUsuario, contrasenna,edad, pais, email, identificacion, pathImg);
         }
 
     }
