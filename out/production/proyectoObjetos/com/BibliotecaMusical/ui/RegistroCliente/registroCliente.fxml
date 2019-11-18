@@ -37,7 +37,4 @@
       <TextField fx:id="txtIdentifacion" layoutX="181.0" layoutY="341.0" />
        
    </children>
-   <stylesheets>
-      <URL value="@demo.css" />
-   </stylesheets>
 </AnchorPane>

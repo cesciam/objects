@@ -1,14 +1,12 @@
-package com.BibliotecaMusical.bl;
+package com.BibliotecaMusical.bl.Usuario;
 
-import java.util.Objects;
-
-public class Cliente extends Usuario{
+public class Cliente extends Usuario {
     private int edad;
     private String pais;
     private int identificacion;
 
-    public Cliente(String nombre, String apellidos, String img, String nombreUsuario, String contrasenna, String correo, int edad, String pais, int identificacion) {
-        super(nombre, apellidos, img, nombreUsuario, contrasenna, correo);
+    public Cliente(String nombre, String apellidos, String img, String nombreUsuario, String contrasenna, String correo, String tipo, int edad, String pais, int identificacion) {
+        super(nombre, apellidos, img, nombreUsuario, contrasenna, correo, tipo);
         this.edad = edad;
         this.pais = pais;
         this.identificacion = identificacion;

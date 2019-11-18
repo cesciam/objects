@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class ConeccionBD {
     private final String driverClassName = "com.mysql.jdbc.Driver";
-    private final String connectionUrl = "jdbc:mysql://localhost:3306/escuela";
+    private final String connectionUrl = "jdbc:mysql://localhost:3306/bibliotecamusical";
     private final String dbUser = "root";
     private final String dbPwd = "1234";
 
@@ -32,6 +32,5 @@ public class ConeccionBD {
         }
         return coneccionBD;
     }
-
 
 }

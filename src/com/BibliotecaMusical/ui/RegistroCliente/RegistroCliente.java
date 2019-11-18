@@ -32,6 +32,8 @@ import java.util.stream.Stream;
 
 public class RegistroCliente {
 
+    Controlador controlador = new Controlador();
+
     public ComboBox CBpaises;
     public ImageView imagePreview;
     public TextField txtNombre;
@@ -73,19 +75,12 @@ public class RegistroCliente {
 
     public void registrarUsuario(ActionEvent actionEvent) {
         String nombre =txtNombre.getText();
-
         String apellidos = txtApellidos.getText();
-
         String nombreUsuario = txtNombreUsuario.getText();
-
         String contrasenna = txtContrasenna.getText();
-
         String edad = txtEdad.getText();
-
         String pais = (String) CBpaises.getValue();
-
         String email = txtEmail.getText();
-
         String identificacion = txtIdentifacion.getText();
 
         boolean error = validarDatos(nombre, apellidos, nombreUsuario, contrasenna,edad, pais, email, identificacion, pathImg);
@@ -96,14 +91,27 @@ public class RegistroCliente {
             alert.setContentText("Revise los campos marcados en rojo.");
             alert.show();
         }else {
+            controlador.registrarCliente(nombre, apellidos, nombreUsuario, contrasenna,edad, pais, email, identificacion, pathImg);
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Registro");
             alert.setHeaderText("Registro de cliente");
             alert.setContentText("El usuario ha sido registrado y se envio la informacion al correo.");
             alert.show();
-            Controlador.registrarCliente(nombre, apellidos, nombreUsuario, contrasenna,edad, pais, email, identificacion, pathImg);
+            limpiarCajas();
         }
 
+    }
+
+    private void limpiarCajas() {
+        CBpaises.setValue(null);
+        imagePreview.setImage(null);
+        txtNombre.setText(null);
+        txtApellidos.setText(null);
+        txtNombreUsuario.setText(null);
+        txtContrasenna.setText(null);
+        txtEmail.setText(null);
+        txtIdentifacion.setText(null);
+        txtEdad.setText(null);
     }
 
     private boolean validarDatos(String nombre, String apellidos, String nombreUsuario, String contrasenna, String edad, String pais, String email, String identificacion, String imagen) {

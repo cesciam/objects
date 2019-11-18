@@ -1,4 +1,4 @@
-package com.BibliotecaMusical.bl;
+package com.BibliotecaMusical.bl.Usuario;
 
 import java.util.Objects;
 
@@ -9,14 +9,16 @@ public class Usuario {
     private String nombreUsuario;
     private String contrasenna;
     private String correo;
+    private String tipo;
 
-    public Usuario(String nombre, String apellidos, String img, String nombreUsuario, String contrasenna, String correo) {
+    public Usuario(String nombre, String apellidos, String img, String nombreUsuario, String contrasenna, String correo, String tipo) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.img = img;
         this.nombreUsuario = nombreUsuario;
         this.contrasenna = contrasenna;
         this.correo = correo;
+        this.tipo = tipo;
     }
 
     public String getNombre() {
@@ -65,6 +67,14 @@ public class Usuario {
 
     public void setCorreo(String correo) {
         this.correo = correo;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     @Override
