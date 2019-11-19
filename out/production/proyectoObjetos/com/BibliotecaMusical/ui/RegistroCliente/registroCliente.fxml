@@ -7,8 +7,8 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
-<?import java.net.URL?>
 <AnchorPane prefHeight="483.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.BibliotecaMusical.ui.RegistroCliente.RegistroCliente">
    <children>
       <Label layoutX="37.0" layoutY="37.0" text="Nombre:" />
@@ -35,6 +35,8 @@
       <Button layoutX="582.0" layoutY="385.0" mnemonicParsing="false" onAction="#registrarUsuario" prefHeight="53.0" prefWidth="120.0" text="Registrar" />
       <Label layoutX="37.0" layoutY="345.0" text="Identificacion:" />
       <TextField fx:id="txtIdentifacion" layoutX="181.0" layoutY="341.0" />
+      <Label layoutX="170.0" layoutY="169.0" text="**" />
+      <Text layoutX="40.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="**La contraseña deberá tener un mínimo de 8 caracteres, y un máximo de 12, con al menos una letra mayúscula, una letra minúscula y un carácter especial." wrappingWidth="271.330078125" />
        
    </children>
 </AnchorPane>

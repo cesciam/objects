@@ -32,6 +32,7 @@ import java.util.stream.Stream;
 
 public class RegistroCliente {
 
+
     Controlador controlador = new Controlador();
 
     public ComboBox CBpaises;
@@ -84,6 +85,7 @@ public class RegistroCliente {
         String identificacion = txtIdentifacion.getText();
 
         boolean error = validarDatos(nombre, apellidos, nombreUsuario, contrasenna,edad, pais, email, identificacion, pathImg);
+        error = validarContrasenna(contrasenna);
         if (error){
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Error");
@@ -99,6 +101,13 @@ public class RegistroCliente {
             alert.show();
             limpiarCajas();
         }
+
+    }
+
+    private boolean validarContrasenna(String contrasenna) {
+        
+        String emailRegexp = "[^@]+@[^@]+\\.[a-zA-Z]{2,}";
+
 
     }
 
@@ -176,4 +185,5 @@ public class RegistroCliente {
 
         return error;
     }
+
 }
