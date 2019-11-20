@@ -1,10 +1,10 @@
 package com.BibliotecaMusical.bl;
 
-public interface IDAO {
+public interface IDAO<T> {
 
-    void guardar(Object object);
-    void actualizar(Object object);
-    void eliminar(Object object);
-    void buscar(Object object);
+    void guardar(T t);
+    void actualizar(T t);
+    void eliminar(T t);
+    void buscar(T t);
 
 }

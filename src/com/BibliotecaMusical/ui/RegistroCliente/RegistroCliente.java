@@ -172,8 +172,6 @@ public class RegistroCliente {
         if (imagen.equals("")){
             error= true;
         }
-
-
         return error;
     }
 }

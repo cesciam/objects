@@ -4,6 +4,7 @@ import com.BibliotecaMusical.bl.IDAO;
 import com.BibliotecaMusical.bl.Usuario.Cliente;
 import com.BibliotecaMusical.bl.Usuario.UsuarioIDAO;
 import javafx.scene.control.Alert;
+import jdk.nashorn.internal.runtime.regexp.joni.Regex;
 
 public class Controlador {
 
@@ -14,6 +15,8 @@ public class Controlador {
         Cliente cliente = new Cliente(nombre,apellidos, pathImg, nombreUsuario, contrasenna, email, "Cliente", edadCliente, pais, identificacionCliente);
 
         usuarioIDAO.guardar(cliente);
+
+
 
     }
 
