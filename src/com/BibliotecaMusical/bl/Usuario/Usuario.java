@@ -11,6 +11,8 @@ public class Usuario {
     private String correo;
     private String tipo;
 
+    private static Usuario instance;
+
     public Usuario(String nombre, String apellidos, String img, String nombreUsuario, String contrasenna, String correo, String tipo) {
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -19,6 +21,16 @@ public class Usuario {
         this.contrasenna = contrasenna;
         this.correo = correo;
         this.tipo = tipo;
+    }
+
+    public Usuario() {
+
+    }
+
+    public static Usuario getInstance() {
+        if (instance == null)
+            instance = new Usuario();
+        return instance;
     }
 
     public String getNombre() {

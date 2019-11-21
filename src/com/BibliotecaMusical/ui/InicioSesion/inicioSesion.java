@@ -1,5 +1,6 @@
 package com.BibliotecaMusical.ui.InicioSesion;
 
+import com.BibliotecaMusical.tl.Controlador;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,6 +13,7 @@ import javafx.stage.Window;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class inicioSesion {
 
@@ -19,7 +21,7 @@ public class inicioSesion {
     public TextField txtPass;
     public Button btnRegistro;
 
-
+    Controlador controlador = new Controlador();
 
     public void registroCliente(ActionEvent actionEvent) throws IOException {
 
@@ -28,7 +30,11 @@ public class inicioSesion {
         Stage stage = (Stage) window;
         Parent root = FXMLLoader.load(getClass().getResource("../RegistroCliente/registroCliente.fxml"));
         stage.setScene(new Scene(root));
+    }
 
+
+    public void iniciarSesion(ActionEvent actionEvent) throws SQLException {
+        boolean datosCorrectos = controlador.iniciarSesion(txtUserName.getText(), txtPass.getText());
 
     }
 }

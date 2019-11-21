@@ -2,8 +2,13 @@ package com.BibliotecaMusical.tl;
 
 import com.BibliotecaMusical.bl.IDAO;
 import com.BibliotecaMusical.bl.Usuario.Cliente;
+import com.BibliotecaMusical.bl.Usuario.Usuario;
 import com.BibliotecaMusical.bl.Usuario.UsuarioIDAO;
 import javafx.scene.control.Alert;
+import jdk.nashorn.internal.runtime.regexp.joni.Regex;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class Controlador {
 
@@ -23,4 +28,20 @@ public class Controlador {
 
     }
 
+    public boolean iniciarSesion(String usuario, String contrasenna) throws SQLException {
+        UsuarioIDAO usuarioIDAO = new UsuarioIDAO();
+        ResultSet rs = usuarioIDAO.login(usuario, contrasenna);
+
+        if(rs == null){
+            return false;
+        }
+
+
+        if (rs.getString("tipo").equals("Cliente")){
+            Cliente usuarioActual = (Cliente) Usuario.getInstance();
+
+        }
+
+        return true;
+    }
 }

@@ -106,9 +106,9 @@ public class RegistroCliente {
 
     private boolean validarContrasenna(String contrasenna) {
         
-        String emailRegexp = "[^@]+@[^@]+\\.[a-zA-Z]{2,}";
 
 
+return false;
     }
 
     private void limpiarCajas() {
@@ -181,8 +181,6 @@ public class RegistroCliente {
         if (imagen.equals("")){
             error= true;
         }
-
-
         return error;
     }
 

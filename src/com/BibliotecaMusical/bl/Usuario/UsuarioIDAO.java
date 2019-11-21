@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UsuarioIDAO{
+public class UsuarioIDAO implements IDAO<Usuario>{
 
     private Connection connection = null;
     PreparedStatement ps;
@@ -22,8 +22,8 @@ public class UsuarioIDAO{
     }
 
 
-    public void guardar(Object object) {
-        Usuario usuario = (Usuario) object;
+    @Override
+    public void guardar(Usuario usuario) {
 
         if (usuario.getTipo() == "Cliente"){
             Cliente cliente = (Cliente) usuario;
@@ -49,18 +49,43 @@ public class UsuarioIDAO{
         }
     }
 
-
-    public void actualizar(Object usuario) {
-
-    }
-
-
-    public void eliminar(Object usuario) {
+    @Override
+    public void actualizar(Usuario usuario) {
 
     }
 
+    @Override
+    public void eliminar(Usuario usuario) {
 
-    public void buscar(Object object) {
+    }
 
+    @Override
+    public void buscar(Usuario usuario) {
+
+    }
+
+    public ResultSet login(String usuario, String password){
+        ResultSet existe = null;
+        try {
+            connection = getConnection();
+            ResultSet rs;
+            ps = connection.prepareStatement("SELECT idusuario, nombre, apellidos, imagen, correo, edad, pais, cedula, tipo FROM usuario WHERE nombreUsuario = ? and contrasenna = ?");
+            ps.setString(1, usuario);
+            ps.setString(2, password);
+            rs = ps.executeQuery();
+            rs.last();
+
+            System.out.println(rs.getString("correo"));
+
+            if (rs.getRow() > 0){
+                existe = rs;
+            }else{
+                existe = null;
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+
+        return existe;
     }
 }

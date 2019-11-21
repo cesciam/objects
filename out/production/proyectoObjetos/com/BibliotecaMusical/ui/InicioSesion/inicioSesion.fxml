@@ -8,7 +8,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="266.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.BibliotecaMusical.ui.InicioSesion.inicioSesion">
    <children>
-      <Button layoutX="246.0" layoutY="176.0" mnemonicParsing="false" text="Iniciar sesión" />
+      <Button layoutX="246.0" layoutY="176.0" mnemonicParsing="false" onAction="#iniciarSesion" text="Iniciar sesión" />
       <TextField fx:id="txtUserName" layoutX="140.0" layoutY="60.0" />
       <Label layoutX="21.0" layoutY="60.0" text="Nombre de usuario" />
       <Label layoutX="21.0" layoutY="108.0" text="Contraseña" />

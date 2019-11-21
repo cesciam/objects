@@ -20,7 +20,6 @@ public class Main extends Application {
         controlador.comprobarAdministrador();
     }
 
-
     public static void main(String[] args) {
         launch(args);
     }
