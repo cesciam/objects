@@ -1,4 +1,12 @@
 package com.BibliotecaMusical.bl.Factory;
 
-public class MySqlDaoFactory {
+import com.BibliotecaMusical.bl.IUsuarioDAO;
+import com.BibliotecaMusical.bl.Usuario.UsuarioDAO;
+
+public class MySqlDaoFactory extends DAOFactory {
+    public IUsuarioDAO getpersonaDao() {
+
+        return new UsuarioDAO();
+    }
+
 }
