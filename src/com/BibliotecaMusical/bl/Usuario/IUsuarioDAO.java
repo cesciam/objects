@@ -1,6 +1,6 @@
 package com.BibliotecaMusical.bl;
 
-public interface IDAO<T> {
+public interface IUsuarioDAO<T> {
 
     void guardar(T t);
     void actualizar(T t);

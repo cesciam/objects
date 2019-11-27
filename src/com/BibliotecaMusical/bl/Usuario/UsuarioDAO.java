@@ -1,6 +1,6 @@
 package com.BibliotecaMusical.bl.Usuario;
 
-import com.BibliotecaMusical.bl.IDAO;
+import com.BibliotecaMusical.bl.IUsuarioDAO;
 import com.BibliotecaMusical.dl.ConeccionBD;
 
 import java.sql.Connection;
@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UsuarioIDAO implements IDAO<Usuario>{
+public class UsuarioIUsuarioDAO implements IUsuarioDAO<Usuario> {
 
     private Connection connection = null;
     PreparedStatement ps;
