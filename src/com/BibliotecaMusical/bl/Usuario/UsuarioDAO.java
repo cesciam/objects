@@ -1,6 +1,7 @@
 package com.BibliotecaMusical.bl.Usuario;
 
 import com.BibliotecaMusical.bl.IUsuarioDAO;
+import com.BibliotecaMusical.dl.ConnecionBD;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,10 +17,9 @@ public class UsuarioDAO implements IUsuarioDAO<Usuario> {
 
     private Connection getConnection() throws SQLException {
         Connection conn = null;
-        conn = ConeccionBD.getInstance().getConnection();
+        conn = ConnecionBD.getInstance().getConnection();
         return conn;
     }
-
 
     @Override
     public void guardar(Usuario usuario) {
