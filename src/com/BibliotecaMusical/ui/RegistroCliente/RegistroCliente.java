@@ -5,6 +5,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
@@ -184,4 +186,11 @@ return false;
         return error;
     }
 
+    public void volverInicio(ActionEvent actionEvent) throws IOException {
+        Scene scene = CBpaises.getScene();
+        Window window = scene.getWindow();
+        Stage stage = (Stage) window;
+        Parent root = FXMLLoader.load(getClass().getResource("../InicioSesion/inicioSesion.fxml"));
+        stage.setScene(new Scene(root));
+    }
 }

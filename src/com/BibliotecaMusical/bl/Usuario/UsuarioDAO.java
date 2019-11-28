@@ -63,8 +63,7 @@ public class UsuarioDAO implements IUsuarioDAO<Usuario> {
 
     }
 
-    public ResultSet login(String usuario, String password){
-        ResultSet existe = null;
+    public boolean login(String usuario, String password){
         try {
             connection = getConnection();
             ResultSet rs;
@@ -77,14 +76,23 @@ public class UsuarioDAO implements IUsuarioDAO<Usuario> {
             System.out.println(rs.getString("correo"));
 
             if (rs.getRow() > 0){
-                existe = rs;
+                 Usuario usuarioActual = Usuario.getInstance();
+                 usuarioActual.setApellidos(rs.getString("apellidos"));
+                 usuarioActual.setCorreo(rs.getString("correo"));
+                 usuarioActual.setImg(rs.getString("imagen"));
+                 usuarioActual.setNombre(rs.getString("nombre"));
+                 usuarioActual.setNombreUsuario(rs.getString("nombreUsuario"));
+                 usuarioActual.setTipo(rs.getString("tipo"));
+                 usuarioActual.setContrasenna(rs.getString("contrasenna"));
+                System.out.println(usuarioActual.toString());
+                 return true;
             }else{
-                existe = null;
+                return false;
             }
         }catch (SQLException e){
             e.printStackTrace();
         }
 
-        return existe;
+        return false;
     }
 }

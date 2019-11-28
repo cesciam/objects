@@ -38,18 +38,13 @@ public class Controlador {
     }
 
     public boolean iniciarSesion(String usuario, String contrasenna) throws SQLException {
-        /*UsuarioIDAO usuarioIDAO = new UsuarioIDAO();
-        ResultSet rs = usuarioIDAO.login(usuario, contrasenna);
 
-        if(rs == null){
-            return false;
+        try {
+            usuarioDAO.login(usuario, contrasenna);
+        }catch (Exception e){
+            System.out.println(e);
         }
 
-
-        if (rs.getString("tipo").equals("Cliente")){
-            Cliente usuarioActual = (Cliente) Usuario.getInstance();
-
-        }*/
 
         return true;
     }

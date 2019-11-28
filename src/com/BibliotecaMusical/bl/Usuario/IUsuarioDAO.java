@@ -6,5 +6,6 @@ public interface IUsuarioDAO<T> {
     void actualizar(T t);
     void eliminar(T t);
     void buscar(T t);
+    boolean login(String usuario, String contrasenna);
 
 }

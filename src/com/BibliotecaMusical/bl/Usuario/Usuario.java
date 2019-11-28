@@ -23,6 +23,19 @@ public class Usuario {
         this.tipo = tipo;
     }
 
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "nombre='" + nombre + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                ", img='" + img + '\'' +
+                ", nombreUsuario='" + nombreUsuario + '\'' +
+                ", contrasenna='" + contrasenna + '\'' +
+                ", correo='" + correo + '\'' +
+                ", tipo='" + tipo + '\'' +
+                '}';
+    }
+
     public Usuario() {
 
     }
