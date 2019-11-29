@@ -1,11 +1,8 @@
 package com.BibliotecaMusical.bl.Usuario;
 
-<<<<<<< Updated upstream
-import com.BibliotecaMusical.bl.IUsuarioDAO;
+
 import com.BibliotecaMusical.dl.ConnecionBD;
-=======
-import com.BibliotecaMusical.dl.ConeccionBD;
->>>>>>> Stashed changes
+
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -77,7 +74,7 @@ public class UsuarioDAO implements IUsuarioDAO<Usuario> {
             rs = ps.executeQuery();
             rs.last();
 
-            System.out.println(rs.getString("correo"));
+            System.out.println(rs.getString("nombreusuario"));
 
             if (rs.getRow() > 0){
                  Usuario usuarioActual = Usuario.getInstance();
@@ -85,7 +82,7 @@ public class UsuarioDAO implements IUsuarioDAO<Usuario> {
                  usuarioActual.setCorreo(rs.getString("correo"));
                  usuarioActual.setImg(rs.getString("imagen"));
                  usuarioActual.setNombre(rs.getString("nombre"));
-                 usuarioActual.setNombreUsuario(rs.getString("nombreUsuario"));
+                 usuarioActual.setNombreUsuario(rs.getString("nombreusuario"));
                  usuarioActual.setTipo(rs.getString("tipo"));
                  usuarioActual.setContrasenna(rs.getString("contrasenna"));
                 System.out.println(usuarioActual.toString());
