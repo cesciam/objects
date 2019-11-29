@@ -1,7 +1,11 @@
 package com.BibliotecaMusical.bl.Usuario;
 
+<<<<<<< Updated upstream
 import com.BibliotecaMusical.bl.IUsuarioDAO;
 import com.BibliotecaMusical.dl.ConnecionBD;
+=======
+import com.BibliotecaMusical.dl.ConeccionBD;
+>>>>>>> Stashed changes
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

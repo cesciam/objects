@@ -3,6 +3,7 @@ package com.BibliotecaMusical.tl;
 import com.BibliotecaMusical.bl.Factory.DAOFactory;
 import com.BibliotecaMusical.bl.IUsuarioDAO;
 import com.BibliotecaMusical.bl.Usuario.Cliente;
+import com.BibliotecaMusical.bl.Usuario.IUsuarioDAO;
 import com.BibliotecaMusical.bl.Usuario.Usuario;
 import javafx.scene.control.Alert;
 import jdk.nashorn.internal.runtime.regexp.joni.Regex;

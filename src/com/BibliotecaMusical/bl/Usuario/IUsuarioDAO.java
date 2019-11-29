@@ -1,4 +1,4 @@
-package com.BibliotecaMusical.bl;
+package com.BibliotecaMusical.bl.Usuario;
 
 public interface IUsuarioDAO<T> {
 
