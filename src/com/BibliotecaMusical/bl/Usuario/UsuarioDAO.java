@@ -68,13 +68,13 @@ public class UsuarioDAO implements IUsuarioDAO<Usuario> {
         try {
             connection = getConnection();
             ResultSet rs;
-            ps = connection.prepareStatement("SELECT idusuario, nombre, apellidos, imagen, correo, edad, pais, cedula, tipo FROM usuario WHERE nombreUsuario = ? and contrasenna = ?");
+            ps = connection.prepareStatement("SELECT * FROM usuario WHERE nombreUsuario = ? and contrasenna = ?");
             ps.setString(1, usuario);
             ps.setString(2, password);
             rs = ps.executeQuery();
             rs.last();
 
-            System.out.println(rs.getString("nombreusuario"));
+            System.out.println(rs.getString("nombreUsuario"));
 
             if (rs.getRow() > 0){
                  Usuario usuarioActual = Usuario.getInstance();
@@ -82,7 +82,7 @@ public class UsuarioDAO implements IUsuarioDAO<Usuario> {
                  usuarioActual.setCorreo(rs.getString("correo"));
                  usuarioActual.setImg(rs.getString("imagen"));
                  usuarioActual.setNombre(rs.getString("nombre"));
-                 usuarioActual.setNombreUsuario(rs.getString("nombreusuario"));
+                 usuarioActual.setNombreUsuario(rs.getString("nombreUsuario"));
                  usuarioActual.setTipo(rs.getString("tipo"));
                  usuarioActual.setContrasenna(rs.getString("contrasenna"));
                 System.out.println(usuarioActual.toString());
