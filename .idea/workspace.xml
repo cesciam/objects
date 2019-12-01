@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="978b5d87-8948-464c-8115-105d8b4553d0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Usuario/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Usuario/UsuarioDAO.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
+=======
+    <list default="true" id="283067d8-4654-40fe-9794-4355a780813f" name="Default Changelist" comment="" />
+>>>>>>> Stashed changes
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,8 +264,13 @@
       <created>1574986767944</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< Updated upstream
       <updated>1574986767944</updated>
       <workItem from="1574986774176" duration="2050000" />
+=======
+      <updated>1574908371693</updated>
+      <workItem from="1574908372869" duration="3828000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
