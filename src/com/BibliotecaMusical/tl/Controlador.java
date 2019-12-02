@@ -1,23 +1,27 @@
 package com.BibliotecaMusical.tl;
 
 import com.BibliotecaMusical.bl.Factory.DAOFactory;
+import com.BibliotecaMusical.bl.ListaReproduccion.IListaReproduccionDAO;
+import com.BibliotecaMusical.bl.ListaReproduccion.ListaReproducción;
 import com.BibliotecaMusical.bl.Usuario.Cliente;
 import com.BibliotecaMusical.bl.Usuario.IUsuarioDAO;
 import com.BibliotecaMusical.bl.Usuario.Usuario;
-import javafx.scene.control.Alert;
-import jdk.nashorn.internal.runtime.regexp.joni.Regex;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class Controlador {
 
     private IUsuarioDAO usuarioDAO;
     private DAOFactory factory;
+    private IListaReproduccionDAO listaReproduccionDAO;
 
     public Controlador() {
         factory = DAOFactory.getDaoFactory(1);
         usuarioDAO = factory.getpersonaDao();
+        listaReproduccionDAO = factory.getListaReproduccionDao();
     }
 
     public void registrarCliente(String nombre, String apellidos, String nombreUsuario, String contrasenna, String edad, String pais, String email, String identificacion, String pathImg) {
@@ -38,14 +42,34 @@ public class Controlador {
     }
 
     public boolean iniciarSesion(String usuario, String contrasenna) throws SQLException {
-
+        boolean login = false;
         try {
-            usuarioDAO.login(usuario, contrasenna);
+            login = usuarioDAO.login(usuario, contrasenna);
         }catch (Exception e){
             System.out.println(e);
         }
+        return login;
+    }
 
+    public boolean tipoUsuario() {
+        Usuario usuario = Usuario.getInstance();
 
-        return true;
+        if (usuario.getTipo().equals("Cliente")){
+            return  true;
+        }else {
+            return false;
+
+        }
+    }
+
+    public ObservableList<ListaReproducción> ListarListasReproduccion() {
+        ObservableList<ListaReproducción> lpList = FXCollections.observableArrayList();
+        ArrayList<ListaReproducción> listaReproduccións = listaReproduccionDAO.listar();
+
+        for (ListaReproducción listaReproducción: listaReproduccións){
+            lpList.add(listaReproducción);
+        }
+
+        return lpList;
     }
 }

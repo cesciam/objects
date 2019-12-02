@@ -73,9 +73,6 @@ public class UsuarioDAO implements IUsuarioDAO<Usuario> {
             ps.setString(2, password);
             rs = ps.executeQuery();
             rs.last();
-
-            System.out.println(rs.getString("nombreUsuario"));
-
             if (rs.getRow() > 0){
                  Usuario usuarioActual = Usuario.getInstance();
                  usuarioActual.setApellidos(rs.getString("apellidos"));
@@ -85,7 +82,7 @@ public class UsuarioDAO implements IUsuarioDAO<Usuario> {
                  usuarioActual.setNombreUsuario(rs.getString("nombreUsuario"));
                  usuarioActual.setTipo(rs.getString("tipo"));
                  usuarioActual.setContrasenna(rs.getString("contrasenna"));
-                System.out.println(usuarioActual.toString());
+                 usuarioActual.setIdUsuario(rs.getInt("idusuario"));
                  return true;
             }else{
                 return false;

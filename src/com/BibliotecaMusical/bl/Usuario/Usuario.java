@@ -3,6 +3,7 @@ package com.BibliotecaMusical.bl.Usuario;
 import java.util.Objects;
 
 public class Usuario {
+    private int idUsuario;
     private String nombre;
     private String apellidos;
     private String img;
@@ -12,6 +13,14 @@ public class Usuario {
     private String tipo;
 
     private static Usuario instance;
+
+    public int getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
+    }
 
     public Usuario(String nombre, String apellidos, String img, String nombreUsuario, String contrasenna, String correo, String tipo) {
         this.nombre = nombre;
