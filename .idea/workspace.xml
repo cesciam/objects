@@ -2,26 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b42fc41a-fee2-44a7-b4b2-452bcdb464f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Cancion/Cancion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/ListaReproduccion/IListaReproduccionDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/ListaReproduccion/ListaReproduccionDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/ListaReproduccion/ListaReproducción.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Canciones/listarCancionesCliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/META-INF/proyectoObjetos.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoObjetos/META-INF/proyectoObjetos.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/bl/Factory/DAOFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/bl/Factory/DAOFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/bl/Factory/MySqlDaoFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/bl/Factory/MySqlDaoFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/bl/IUsuarioDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/bl/Usuario/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/bl/Usuario/Usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/bl/Usuario/UsuarioDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/bl/Usuario/UsuarioDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/tl/Controlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/tl/Controlador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/InicioSesion/inicioSesion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/InicioSesion/inicioSesion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Factory/DAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Factory/DAOFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Factory/MySqlDaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Factory/MySqlDaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Usuario/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Usuario/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Usuario/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Usuario/UsuarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/tl/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/tl/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/InicioSesion/inicioSesion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/InicioSesion/inicioSesion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScriptSQLMusica.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ScriptSQLMusica.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeloBaseDeDatos.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/modeloBaseDeDatos.mwb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeloBaseDeDatos.mwb.bak" beforeDir="false" afterPath="$PROJECT_DIR$/modeloBaseDeDatos.mwb.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/RegistroCliente/RegistroCliente.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/RegistroCliente/registroCliente.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/ListaReproduccion/ListaReproduccionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/ListaReproduccion/ListaReproduccionDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/RegistroCliente/RegistroCliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/RegistroCliente/registroCliente.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioCliente/InicioCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioCliente/InicioCliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioCliente/inicioCliente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioCliente/inicioCliente.fxml" afterDir="false" />
     </list>
@@ -90,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575177246867</updated>
-      <workItem from="1575177248614" duration="12736000" />
+      <workItem from="1575177248614" duration="14841000" />
     </task>
     <servers />
   </component>
@@ -118,33 +108,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioCliente/InicioCliente.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioCliente/InicioCliente.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioCliente/InicioCliente.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioCliente/InicioCliente.java</url>
           <line>32</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioCliente/InicioCliente.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioCliente/InicioCliente.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="33" />
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/BibliotecaMusical/tl/Controlador.java</url>
@@ -165,11 +130,6 @@
           <url>file://$PROJECT_DIR$/src/com/BibliotecaMusical/tl/Controlador.java</url>
           <line>69</line>
           <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/BibliotecaMusical/bl/ListaReproduccion/ListaReproduccionDAO.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/BibliotecaMusical/tl/Controlador.java</url>

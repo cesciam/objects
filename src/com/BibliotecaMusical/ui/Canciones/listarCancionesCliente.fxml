@@ -6,22 +6,14 @@
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.BibliotecaMusical.ui.inicioCliente.InicioCliente">
+<AnchorPane prefHeight="700.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.BibliotecaMusical.ui.Canciones.listarCancionesCliente">
    <children>
-      <TableView fx:id="tableLlistas" layoutX="594.0" layoutY="178.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="268.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="130.0">
-        <columns>
-          <TableColumn fx:id="table_nombre" prefWidth="173.0" text="Nombre" />
-          <TableColumn fx:id="table_fecha" prefWidth="202.0" text="Fecha creación" />
-          <TableColumn fx:id="table_calificacion" prefWidth="177.0" text="Calificacion" />
-          <TableColumn fx:id="table_ver" minWidth="0.0" prefWidth="203.0" text="Ver" />
-        </columns>
-      </TableView>
-      <AnchorPane layoutY="8.0" prefHeight="700.0" prefWidth="254.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="756.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutY="8.0" prefHeight="700.0" prefWidth="254.0">
          <effect>
             <Blend />
          </effect>
          <children>
-            <Button layoutX="14.0" layoutY="120.0" mnemonicParsing="false" onAction="#listarCanciones" prefHeight="61.0" prefWidth="254.0" text="Canciones" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+            <Button layoutX="14.0" layoutY="120.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="254.0" text="Canciones" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
             <Button layoutX="14.0" layoutY="198.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="254.0" text="Listas de reproducción" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
             <Button layoutX="14.0" layoutY="276.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="254.0" text="Albumnes" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
             <Button layoutX="14.0" layoutY="354.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="254.0" text="Tienda" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
@@ -29,6 +21,16 @@
             <Button layoutX="14.0" layoutY="510.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="254.0" text="Cerrar sesión" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
          </children>
       </AnchorPane>
-      <Button layoutX="808.0" layoutY="606.0" mnemonicParsing="false" onAction="#registrarListaDeReproduccion" text="Agregar lista de reproducción" />
+      <TableView fx:id="tableCanciones" layoutX="313.0" layoutY="129.0" prefHeight="451.0" prefWidth="705.0">
+        <columns>
+          <TableColumn fx:id="col_nombre" prefWidth="103.0" text="Nombre" />
+          <TableColumn fx:id="col_artista" prefWidth="88.0" text="Artista" />
+            <TableColumn fx:id="col_genero" prefWidth="94.0" text="Genero" />
+            <TableColumn fx:id="col_fechaLanzamiento" prefWidth="121.0" text="Fecha lanzamiento" />
+            <TableColumn fx:id="col_calificacion" prefWidth="139.0" text="Calificacion" />
+            <TableColumn prefWidth="159.0" text="Agregar a cola" />
+        </columns>
+      </TableView>
+      <Button layoutX="850.0" layoutY="580.0" mnemonicParsing="false" text="Registrar cancion" />
    </children>
 </AnchorPane>

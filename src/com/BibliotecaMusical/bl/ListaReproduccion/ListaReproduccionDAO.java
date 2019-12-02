@@ -44,7 +44,7 @@ public class ListaReproduccionDAO implements IListaReproduccionDAO {
 
             while (rs.next()){
                 ListaReproducción listaReproducción = new ListaReproducción(rs.getString("nombre"), rs.getDate("fechaCreacion").toLocalDate(), rs.getDouble("calificacion"));
-                listaReproduccións.add(listaReproducción);  
+                listaReproduccións.add(listaReproducción);
             }
 
         } catch (SQLException e) {
