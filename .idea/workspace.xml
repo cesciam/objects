@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b42fc41a-fee2-44a7-b4b2-452bcdb464f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Canciones/listarCancionesCliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Canciones/ListarCancionesCli.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Canciones/RegistroCancionCli.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Canciones/listarCancionesCli.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Canciones/registroCancionCli.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ScriptSQLMusica.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ScriptSQLMusica.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modeloBaseDeDatos.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/modeloBaseDeDatos.mwb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modeloBaseDeDatos.mwb.bak" beforeDir="false" afterPath="$PROJECT_DIR$/modeloBaseDeDatos.mwb.bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/RegistroCliente/RegistroCliente.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/RegistroCliente/registroCliente.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/ListaReproduccion/ListaReproduccionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/ListaReproduccion/ListaReproduccionDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/RegistroCliente/RegistroCliente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/RegistroCliente/registroCliente.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Canciones/listarCancionesCliente.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Canciones/listarCancionesCliente.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioCliente/InicioCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioCliente/InicioCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioCliente/inicioCliente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioCliente/inicioCliente.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,9 +24,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -92,7 +95,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

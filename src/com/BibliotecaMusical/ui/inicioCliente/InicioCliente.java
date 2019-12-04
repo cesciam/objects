@@ -49,7 +49,7 @@ public class InicioCliente implements  Initializable{
         Scene scene = tableLlistas.getScene();
         Window window = scene.getWindow();
         Stage stage = (Stage) window;
-        Parent root = FXMLLoader.load(getClass().getResource("../Canciones/listarCancionesCliente.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../Canciones/listarCancionesCli.fxml"));
         stage.setScene(new Scene(root));
     }
 }
