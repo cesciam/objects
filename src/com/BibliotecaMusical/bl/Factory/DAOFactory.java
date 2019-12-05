@@ -1,6 +1,8 @@
 package com.BibliotecaMusical.bl.Factory;
 
 
+import com.BibliotecaMusical.bl.Artista.IArtistaDao;
+import com.BibliotecaMusical.bl.Genero.IGeneroDAO;
 import com.BibliotecaMusical.bl.ListaReproduccion.IListaReproduccionDAO;
 import com.BibliotecaMusical.bl.Usuario.IUsuarioDAO;
 
@@ -24,4 +26,8 @@ public abstract class DAOFactory {
     public abstract IUsuarioDAO getpersonaDao();
 
     public abstract IListaReproduccionDAO getListaReproduccionDao();
+
+    public abstract IGeneroDAO getGeneroDao();
+
+    public abstract IArtistaDao getArtistaDao();
 }

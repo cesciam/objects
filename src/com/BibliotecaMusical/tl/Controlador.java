@@ -1,6 +1,10 @@
 package com.BibliotecaMusical.tl;
 
+import com.BibliotecaMusical.bl.Artista.Artista;
+import com.BibliotecaMusical.bl.Artista.IArtistaDao;
 import com.BibliotecaMusical.bl.Factory.DAOFactory;
+import com.BibliotecaMusical.bl.Genero.Genero;
+import com.BibliotecaMusical.bl.Genero.IGeneroDAO;
 import com.BibliotecaMusical.bl.ListaReproduccion.IListaReproduccionDAO;
 import com.BibliotecaMusical.bl.ListaReproduccion.ListaReproducción;
 import com.BibliotecaMusical.bl.Usuario.Cliente;
@@ -17,11 +21,15 @@ public class Controlador {
     private IUsuarioDAO usuarioDAO;
     private DAOFactory factory;
     private IListaReproduccionDAO listaReproduccionDAO;
+    private IGeneroDAO generoDAO;
+    private IArtistaDao artistaDao;
 
     public Controlador() {
         factory = DAOFactory.getDaoFactory(1);
         usuarioDAO = factory.getpersonaDao();
         listaReproduccionDAO = factory.getListaReproduccionDao();
+        generoDAO = factory.getGeneroDao();
+        artistaDao = factory.getArtistaDao();
     }
 
     public void registrarCliente(String nombre, String apellidos, String nombreUsuario, String contrasenna, String edad, String pais, String email, String identificacion, String pathImg) {
@@ -71,5 +79,27 @@ public class Controlador {
         }
 
         return lpList;
+    }
+
+    public ObservableList<Genero> listaGeneros() {
+        ObservableList<Genero> listaGeneros = FXCollections.observableArrayList();
+        ArrayList<Genero> generos = generoDAO.listar();
+
+        for (Genero genero: generos){
+            listaGeneros.add(genero);
+        }
+
+        return listaGeneros;
+    }
+
+    public ObservableList<Artista> listaArtistas() {
+        ObservableList<Artista> listaArtistas = FXCollections.observableArrayList();
+        ArrayList<Artista> artistas = artistaDao.listar();
+
+        for (Artista artista: artistas){
+            listaArtistas.add(artista);
+        }
+
+        return listaArtistas;
     }
 }
