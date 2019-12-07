@@ -2,6 +2,9 @@ package com.BibliotecaMusical.tl;
 
 import com.BibliotecaMusical.bl.Artista.Artista;
 import com.BibliotecaMusical.bl.Artista.IArtistaDao;
+import com.BibliotecaMusical.bl.Cancion.Cancion;
+import com.BibliotecaMusical.bl.Cancion.ICancionDao;
+import com.BibliotecaMusical.bl.Compositor.Compositor;
 import com.BibliotecaMusical.bl.Factory.DAOFactory;
 import com.BibliotecaMusical.bl.Genero.Genero;
 import com.BibliotecaMusical.bl.Genero.IGeneroDAO;
@@ -14,6 +17,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Controlador {
@@ -23,6 +27,7 @@ public class Controlador {
     private IListaReproduccionDAO listaReproduccionDAO;
     private IGeneroDAO generoDAO;
     private IArtistaDao artistaDao;
+    private ICancionDao cancionDao;
 
     public Controlador() {
         factory = DAOFactory.getDaoFactory(1);
@@ -30,6 +35,7 @@ public class Controlador {
         listaReproduccionDAO = factory.getListaReproduccionDao();
         generoDAO = factory.getGeneroDao();
         artistaDao = factory.getArtistaDao();
+        cancionDao = factory.getCancionDao();
     }
 
     public void registrarCliente(String nombre, String apellidos, String nombreUsuario, String contrasenna, String edad, String pais, String email, String identificacion, String pathImg) {
@@ -102,4 +108,12 @@ public class Controlador {
 
         return listaArtistas;
     }
+
+    public void registrarCancion(String nombre, String pathCancion, LocalDate fechaLanzamiento, int calificacion, Genero genero, Compositor compositor, Artista artista) {
+        Cancion cancion = new Cancion(nombre, pathCancion, fechaLanzamiento,calificacion, genero, compositor, artista);
+        cancionDao.registrar(cancion);
+
+    }
+
+
 }

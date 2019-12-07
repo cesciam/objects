@@ -1,11 +1,13 @@
 package com.BibliotecaMusical.ui.Canciones;
 
 import com.BibliotecaMusical.bl.Artista.Artista;
+import com.BibliotecaMusical.bl.Compositor.Compositor;
 import com.BibliotecaMusical.bl.Genero.Genero;
 import com.BibliotecaMusical.tl.Controlador;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
@@ -19,6 +21,7 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.time.LocalDate;
 
 public class RegistroCancionCli {
 
@@ -26,6 +29,7 @@ public class RegistroCancionCli {
     public TextField txt_nombre;
     public TextField txt_Calificacion;
     public TextField txt_pathCancion;
+    public ComboBox cb_compositor;
     Controlador controlador = new Controlador();
     public ComboBox cb_generos;
     public ComboBox cb_artista;
@@ -59,5 +63,40 @@ public class RegistroCancionCli {
         txt_pathCancion.setText(pathSong);
     }
 
-    
+    public void listarCompositores(MouseEvent mouseEvent) {
+    }
+
+
+    public void registrarCancion(ActionEvent actionEvent) {
+        Compositor compositor = (Compositor) cb_compositor.getValue();
+        Artista artista = (Artista) cb_artista.getValue();
+        Genero genero = (Genero) cb_generos.getValue();
+        LocalDate fechaLanzamiento = dp_fecha.getValue();
+        String nombre = txt_nombre.getText();
+        String pathCancion = txt_pathCancion.getText();
+        String calificacion = txt_Calificacion.getText();
+        int calificacionInt = Integer.parseInt(calificacion);
+
+        controlador.registrarCancion(nombre,pathCancion, fechaLanzamiento, calificacionInt, genero,compositor, artista );
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Registro correcto");
+        alert.setHeaderText("La cancion ha sido registrada!");
+        alert.setContentText("La cancion ha sido registrada de manera exitosa.");
+        alert.show();
+
+        limpiarCajas();
+
+    }
+
+    private void limpiarCajas() {
+        dp_fecha.setValue(null);
+        txt_nombre.setText(null);
+        txt_pathCancion.setText(null);
+        txt_Calificacion.setText(null);
+        cb_generos.setValue(null);
+        cb_artista.setValue(null);
+        cb_compositor.setValue(null);
+
+    }
 }
