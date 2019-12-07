@@ -5,6 +5,7 @@ import com.BibliotecaMusical.bl.Artista.IArtistaDao;
 import com.BibliotecaMusical.bl.Cancion.Cancion;
 import com.BibliotecaMusical.bl.Cancion.ICancionDao;
 import com.BibliotecaMusical.bl.Compositor.Compositor;
+import com.BibliotecaMusical.bl.Compositor.ICompositorDao;
 import com.BibliotecaMusical.bl.Factory.DAOFactory;
 import com.BibliotecaMusical.bl.Genero.Genero;
 import com.BibliotecaMusical.bl.Genero.IGeneroDAO;
@@ -28,6 +29,7 @@ public class Controlador {
     private IGeneroDAO generoDAO;
     private IArtistaDao artistaDao;
     private ICancionDao cancionDao;
+    private ICompositorDao compositorDao;
 
     public Controlador() {
         factory = DAOFactory.getDaoFactory(1);
@@ -36,6 +38,7 @@ public class Controlador {
         generoDAO = factory.getGeneroDao();
         artistaDao = factory.getArtistaDao();
         cancionDao = factory.getCancionDao();
+        compositorDao = factory.getCompositorDao();
     }
 
     public void registrarCliente(String nombre, String apellidos, String nombreUsuario, String contrasenna, String edad, String pais, String email, String identificacion, String pathImg) {
@@ -112,7 +115,17 @@ public class Controlador {
     public void registrarCancion(String nombre, String pathCancion, LocalDate fechaLanzamiento, int calificacion, Genero genero, Compositor compositor, Artista artista) {
         Cancion cancion = new Cancion(nombre, pathCancion, fechaLanzamiento,calificacion, genero, compositor, artista);
         cancionDao.registrar(cancion);
+    }
 
+    public ObservableList<Compositor> listaCompositor() {
+        ObservableList<Compositor> listaCompositor = FXCollections.observableArrayList();
+        ArrayList<Compositor> compositors =compositorDao.listar();
+
+        for (Compositor compositor: compositors){
+            listaCompositor.add(compositor);
+        }
+
+        return listaCompositor;
     }
 
 

@@ -1,4 +1,8 @@
 package com.BibliotecaMusical.bl.Compositor;
 
-public class ICompositorDao {
+import java.util.ArrayList;
+
+public interface ICompositorDao {
+
+    ArrayList<Compositor> listar();
 }

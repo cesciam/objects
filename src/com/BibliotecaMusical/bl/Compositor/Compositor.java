@@ -20,6 +20,13 @@ public class Compositor {
         this.generos = generos;
     }
 
+    public Compositor(String nombre, String apellidos, String pais, int edad) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.pais = pais;
+        this.edad = edad;
+    }
+
     @Override
     public String toString() {
         return nombre;

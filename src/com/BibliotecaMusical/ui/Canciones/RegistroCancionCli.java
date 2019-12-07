@@ -64,6 +64,8 @@ public class RegistroCancionCli {
     }
 
     public void listarCompositores(MouseEvent mouseEvent) {
+        ObservableList<Compositor> compositorsList = controlador.listaCompositor();
+        cb_compositor.setItems(compositorsList);
     }
 
 
