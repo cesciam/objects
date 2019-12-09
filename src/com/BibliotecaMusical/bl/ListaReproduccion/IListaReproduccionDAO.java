@@ -8,5 +8,5 @@ public interface IListaReproduccionDAO<T> {
     void actualizar(T t);
     void eliminar(T t);
     ArrayList<ListaReproducción> listar();
-
+    void registrarCancionEnLista(ListaReproducción listaReproducción);
 }

@@ -129,4 +129,23 @@ public class Controlador {
     }
 
 
+    public void registrarLP(String nombre, LocalDate fechaCreacion, int calificacion) {
+        ListaReproducción listaReproducción = new ListaReproducción(nombre, fechaCreacion, calificacion);
+        listaReproduccionDAO.guardar(listaReproducción);
+    }
+
+    public void registrarCancionLP(ListaReproducción listaReproducción) {
+        listaReproduccionDAO.registrarCancionEnLista(listaReproducción);
+    }
+
+    public ObservableList<Cancion> listaCancionesUsuarios() throws SQLException {
+        ObservableList<Cancion> listaCancionesUsuario = FXCollections.observableArrayList();
+        ArrayList<Cancion> canciones = cancionDao.cancionesUsuario();
+
+        for (Cancion cancion: canciones){
+            listaCancionesUsuario.add(cancion);
+        }
+
+        return listaCancionesUsuario;
+    }
 }

@@ -6,11 +6,10 @@ import com.BibliotecaMusical.bl.Genero.Genero;
 import com.BibliotecaMusical.tl.Controlador;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
@@ -30,6 +29,7 @@ public class RegistroCancionCli {
     public TextField txt_Calificacion;
     public TextField txt_pathCancion;
     public ComboBox cb_compositor;
+    public Button bntLP;
     Controlador controlador = new Controlador();
     public ComboBox cb_generos;
     public ComboBox cb_artista;
@@ -100,5 +100,22 @@ public class RegistroCancionCli {
         cb_artista.setValue(null);
         cb_compositor.setValue(null);
 
+    }
+
+    public void listarCanciones(ActionEvent actionEvent) throws IOException {
+
+        Scene scene = bntLP.getScene();
+        Window window = scene.getWindow();
+        Stage stage = (Stage) window;
+        Parent root = FXMLLoader.load(getClass().getResource("../Canciones/listarCancionesCli.fxml"));
+        stage.setScene(new Scene(root));
+    }
+
+    public void listaReproducciones(ActionEvent actionEvent) throws IOException {
+        Scene scene = bntLP.getScene();
+        Window window = scene.getWindow();
+        Stage stage = (Stage) window;
+        Parent root = FXMLLoader.load(getClass().getResource("../inicioCliente/inicioCliente.fxml"));
+        stage.setScene(new Scene(root));
     }
 }

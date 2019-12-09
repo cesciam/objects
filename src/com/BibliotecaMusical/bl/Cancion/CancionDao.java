@@ -1,11 +1,13 @@
 package com.BibliotecaMusical.bl.Cancion;
 
+import com.BibliotecaMusical.bl.Artista.Artista;
+import com.BibliotecaMusical.bl.Compositor.Compositor;
+import com.BibliotecaMusical.bl.Genero.Genero;
+import com.BibliotecaMusical.bl.Usuario.Usuario;
 import com.BibliotecaMusical.dl.ConnecionBD;
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 
 public class CancionDao implements ICancionDao {
 
@@ -13,6 +15,21 @@ public class CancionDao implements ICancionDao {
         Connection conn = null;
         conn = ConnecionBD.getInstance().getConnection();
         return conn;
+    }
+
+    @Override
+    public ArrayList<Cancion> cancionesUsuario() throws SQLException {
+        ArrayList<Cancion> cancions = new ArrayList<>();
+        Connection connection = getConnection();
+        ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM usuario_has_cancion as uhc inner join cancion as c where uhc.usuario_idusuario = "+ Usuario.getInstance().getIdUsuario() +" and c.idcancion = uhc.cancion_idcancion");
+
+        while (rs.next()){
+                Cancion cancion = new Cancion(rs.getInt("idcancion"), rs.getString("nombre"), rs.getString("pathCancion"), rs.getDate("fechaLanzamiento").toLocalDate(), rs.getInt("calificacion"), new Genero(rs.getString("genero")), new Compositor(rs.getString("compositor")), new Artista(rs.getString("artista")));
+                cancions.add(cancion);
+        }
+
+        return null;
+
     }
 
     @Override

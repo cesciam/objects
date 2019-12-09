@@ -1,21 +1,46 @@
 package com.BibliotecaMusical.bl.ListaReproduccion;
 
 import com.BibliotecaMusical.bl.Cancion.Cancion;
+import javafx.scene.control.Button;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class ListaReproducción {
     private String nombre;
     private LocalDate fechaCreacion;
-    private double calificacion;
+    private int calificacion;
     private ArrayList<Cancion> canciones;
+    private Button buttonPerfil;
+    private int idlp;
+
+    public Button getButtonPerfil() {
+        return buttonPerfil;
+    }
+
+    public void setButtonPerfil(Button buttonPerfil) {
+        this.buttonPerfil = buttonPerfil;
+    }
 
     public ListaReproducción() {
     }
 
-    public ListaReproducción(String nombre, LocalDate fechaCreacion, double calificacion) {
+    public int getIdlp() {
+        return idlp;
+    }
+
+    public void setIdlp(int idlp) {
+        this.idlp = idlp;
+    }
+
+    public ListaReproducción(String nombre, LocalDate fechaCreacion, int calificacion) {
+        this.nombre = nombre;
+        this.fechaCreacion = fechaCreacion;
+        this.calificacion = calificacion;
+    }
+
+    public ListaReproducción(int idlp, String nombre, LocalDate fechaCreacion, int calificacion) {
+        this.idlp = idlp;
         this.nombre = nombre;
         this.fechaCreacion = fechaCreacion;
         this.calificacion = calificacion;
@@ -58,11 +83,11 @@ public class ListaReproducción {
         this.fechaCreacion = fechaCreacion;
     }
 
-    public double getCalificacion() {
+    public int getCalificacion() {
         return calificacion;
     }
 
-    public void setCalificacion(double calificacion) {
+    public void setCalificacion(int calificacion) {
         this.calificacion = calificacion;
     }
 
@@ -72,5 +97,9 @@ public class ListaReproducción {
 
     public void setCanciones(ArrayList<Cancion> canciones) {
         this.canciones = canciones;
+    }
+
+    public void addCancion(Cancion cancion){
+        canciones.add(cancion);
     }
 }

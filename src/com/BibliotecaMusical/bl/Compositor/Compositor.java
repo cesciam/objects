@@ -12,6 +12,10 @@ public class Compositor {
     private int edad;
     private ArrayList<Genero> generos;
 
+    public Compositor(String nombre) {
+        this.nombre = nombre;
+    }
+
     public Compositor(String nombre, String apellidos, String pais, int edad, ArrayList<Genero> generos) {
         this.nombre = nombre;
         this.apellidos = apellidos;

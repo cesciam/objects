@@ -2,7 +2,7 @@ package com.BibliotecaMusical.ui.inicioCliente;
 
 import com.BibliotecaMusical.bl.ListaReproduccion.ListaReproducción;
 import com.BibliotecaMusical.tl.Controlador;
-import javafx.collections.FXCollections;
+import com.BibliotecaMusical.ui.LPCliente.PerfilLP;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -38,11 +38,35 @@ public class InicioCliente implements  Initializable{
         table_nombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         table_fecha.setCellValueFactory(new PropertyValueFactory<>("fechaCreacion"));
         table_calificacion.setCellValueFactory(new PropertyValueFactory<>("calificacion"));
-
+        table_ver.setCellValueFactory(new PropertyValueFactory<>("buttonPerfil"));
+        for (ListaReproducción listaReproducción: lpList){
+            Button button = new Button();
+            button.setText("Ver lista de reproduccion.");
+            button.setOnAction(event -> {
+                Scene scene = tableLlistas.getScene();
+                Window window = scene.getWindow();
+                Stage stage = (Stage) window;
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("../LPCliente/PerfilLP.fxml"));
+                try {
+                    Parent root = loader.load();
+                    PerfilLP perfilLP = loader.getController();
+                    perfilLP.setListaReproducción(listaReproducción);
+                    stage.setScene(new Scene(root));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            });
+            listaReproducción.setButtonPerfil(button);
+        }
         tableLlistas.setItems(lpList);
     }
 
-    public void registrarListaDeReproduccion(ActionEvent actionEvent) {
+    public void registrarListaDeReproduccion(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("../LPCliente/registroLP.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Biblioteca Musical");
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     public void listarCanciones(ActionEvent actionEvent) throws IOException {

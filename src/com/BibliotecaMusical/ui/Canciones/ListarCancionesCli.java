@@ -31,4 +31,12 @@ public class ListarCancionesCli {
         stage.setScene(new Scene(root));
 
     }
+
+    public void listasReproduccion(ActionEvent actionEvent) throws IOException {
+        Scene scene = btnAgregarCancion.getScene();
+        Window window = scene.getWindow();
+        Stage stage = (Stage) window;
+        Parent root = FXMLLoader.load(getClass().getResource("../inicioCliente/inicioCliente.fxml"));
+        stage.setScene(new Scene(root));
+    }
 }

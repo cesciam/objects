@@ -16,6 +16,10 @@ public class Artista {
     private int edad;
     private String descripcion;
 
+    public Artista(String nombre) {
+        this.nombre = nombre;
+    }
+
     public Artista(int id, String nombre, String apellidos, String nombreArtisto, LocalDate fechaNacimiento, LocalDate fechaDefuncion, String pais, String genero, int edad, String descripcion) {
         this.id = id;
         this.nombre = nombre;
