@@ -28,7 +28,7 @@ public class CancionDao implements ICancionDao {
                 cancions.add(cancion);
         }
 
-        return null;
+        return cancions;
 
     }
 

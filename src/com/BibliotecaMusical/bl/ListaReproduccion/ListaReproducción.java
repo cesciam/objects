@@ -13,6 +13,15 @@ public class ListaReproducción {
     private ArrayList<Cancion> canciones;
     private Button buttonPerfil;
     private int idlp;
+    private  Cancion cancionToUpload;
+
+    public Cancion getCancionToUpload() {
+        return cancionToUpload;
+    }
+
+    public void setCancionToUpload(Cancion cancionToUpload) {
+        this.cancionToUpload = cancionToUpload;
+    }
 
     public Button getButtonPerfil() {
         return buttonPerfil;

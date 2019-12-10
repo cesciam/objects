@@ -4,6 +4,7 @@ import com.BibliotecaMusical.bl.Artista.Artista;
 import com.BibliotecaMusical.bl.Compositor.Compositor;
 import com.BibliotecaMusical.bl.Genero.Genero;
 
+import java.awt.*;
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -16,6 +17,24 @@ public class Cancion {
     private Genero genero;
     private Compositor compositor;
     private Artista artista;
+    private Button agregarCola;
+    private Button eliminar;
+
+    public Button getAgregarCola() {
+        return agregarCola;
+    }
+
+    public void setAgregarCola(Button agregarCola) {
+        this.agregarCola = agregarCola;
+    }
+
+    public Button getEliminar() {
+        return eliminar;
+    }
+
+    public void setEliminar(Button eliminar) {
+        this.eliminar = eliminar;
+    }
 
     public Cancion(String nombre, String pathCancion, LocalDate fechaLanzamiento, int calificacion, Genero genero, Compositor compositor, Artista artista) {
         this.nombre = nombre;
@@ -104,16 +123,7 @@ public class Cancion {
 
     @Override
     public String toString() {
-        return "Cancion{" +
-                "idCancion=" + idCancion +
-                ", nombre='" + nombre + '\'' +
-                ", pathCancion='" + pathCancion + '\'' +
-                ", fechaLanzamiento=" + fechaLanzamiento +
-                ", calificacion=" + calificacion +
-                ", genero=" + genero +
-                ", compositor=" + compositor +
-                ", artista=" + artista +
-                '}';
+        return nombre;
     }
 
     @Override

@@ -1,5 +1,8 @@
 package com.BibliotecaMusical.bl.ListaReproduccion;
 
+import com.BibliotecaMusical.bl.Cancion.Cancion;
+
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public interface IListaReproduccionDAO<T> {
@@ -9,4 +12,6 @@ public interface IListaReproduccionDAO<T> {
     void eliminar(T t);
     ArrayList<ListaReproducción> listar();
     void registrarCancionEnLista(ListaReproducción listaReproducción);
+
+    ArrayList<Cancion> getCancionesLista(int idlp) throws SQLException;
 }

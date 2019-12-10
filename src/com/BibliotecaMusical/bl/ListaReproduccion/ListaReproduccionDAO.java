@@ -1,10 +1,13 @@
 package com.BibliotecaMusical.bl.ListaReproduccion;
 
+import com.BibliotecaMusical.bl.Artista.Artista;
+import com.BibliotecaMusical.bl.Cancion.Cancion;
+import com.BibliotecaMusical.bl.Compositor.Compositor;
+import com.BibliotecaMusical.bl.Genero.Genero;
 import com.BibliotecaMusical.bl.Usuario.Usuario;
 import com.BibliotecaMusical.dl.ConnecionBD;
 
 import java.sql.*;
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class ListaReproduccionDAO implements IListaReproduccionDAO {
@@ -21,13 +24,27 @@ public class ListaReproduccionDAO implements IListaReproduccionDAO {
     }
 
     @Override
+    public ArrayList<Cancion> getCancionesLista(int idlp) throws SQLException {
+        ArrayList<Cancion> cancions = new ArrayList<>();
+        Connection connection = getConnection();
+        ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM listareproduccion_has_cancion as lhc inner join cancion as c where lhc.listareproduccion_idlistareproducciones = "+idlp+" and lhc.cancion_idcancion = c.idcancion and lhc.listareproduccion_usuario_idusuario = "+Usuario.getInstance().getIdUsuario());
+
+        while (rs.next()){
+            Cancion cancion = new Cancion(rs.getInt("idcancion"), rs.getString("nombre"), rs.getString("pathCancion"), rs.getDate("fechaLanzamiento").toLocalDate(), rs.getInt("calificacion"), new Genero(rs.getString("genero")), new Compositor(rs.getString("compositor")), new Artista(rs.getString("artista")));
+            cancions.add(cancion);
+        }
+
+        return cancions;
+    }
+
+    @Override
     public void registrarCancionEnLista(ListaReproducción listaReproducción) {
         try {
             Connection connection = getConnection();
             PreparedStatement ps = connection.prepareStatement("INSERT INTO listareproduccion_has_cancion(listareproduccion_idlistareproducciones, listareproduccion_usuario_idusuario, cancion_idcancion) VALUES(?,?,?)");
             ps.setInt(1, listaReproducción.getIdlp());
             ps.setInt(2, Usuario.getInstance().getIdUsuario());
-            ps.setInt(3, listaReproducción.getCanciones().get(1).getIdCancion());
+            ps.setInt(3, listaReproducción.getCancionToUpload().getIdCancion());
 
             int res = ps.executeUpdate();
 

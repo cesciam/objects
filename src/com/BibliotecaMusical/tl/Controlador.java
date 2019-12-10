@@ -148,4 +148,15 @@ public class Controlador {
 
         return listaCancionesUsuario;
     }
+
+    public ObservableList<Cancion> ListarCancionesLP(int idlp) throws SQLException {
+        ObservableList<Cancion> listaCancionesUsuario = FXCollections.observableArrayList();
+        ArrayList<Cancion> cancions = listaReproduccionDAO.getCancionesLista(idlp);
+
+        for (Cancion cancion: cancions){
+            listaCancionesUsuario.add(cancion);
+        }
+
+        return listaCancionesUsuario;
+    }
 }
