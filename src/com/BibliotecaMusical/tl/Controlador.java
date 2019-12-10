@@ -16,6 +16,7 @@ import com.BibliotecaMusical.bl.Usuario.IUsuarioDAO;
 import com.BibliotecaMusical.bl.Usuario.Usuario;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Button;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -154,6 +155,15 @@ public class Controlador {
         ArrayList<Cancion> cancions = listaReproduccionDAO.getCancionesLista(idlp);
 
         for (Cancion cancion: cancions){
+            Button buttonEliminar = new Button();
+            buttonEliminar.setText("Eliminar");
+
+            Button buttonCola = new Button();
+            buttonCola.setText("Agregar a cola");
+
+            cancion.setEliminar(buttonEliminar);
+            cancion.setAgregarCola(buttonCola);
+
             listaCancionesUsuario.add(cancion);
         }
 

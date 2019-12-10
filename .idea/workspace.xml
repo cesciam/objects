@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b42fc41a-fee2-44a7-b4b2-452bcdb464f3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Cancion/Cancion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Cancion/Cancion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Cancion/CancionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Cancion/CancionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/ListaReproduccion/IListaReproduccionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/ListaReproduccion/IListaReproduccionDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/ListaReproduccion/ListaReproduccionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/ListaReproduccion/ListaReproduccionDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/ListaReproduccion/ListaReproducción.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/ListaReproduccion/ListaReproducción.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/tl/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/tl/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/LPCliente/PerfilLP.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/LPCliente/PerfilLP.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/LPCliente/PerfilLP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/LPCliente/PerfilLP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/LPCliente/RegistroCancionLP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/LPCliente/RegistroCancionLP.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +81,7 @@
       <workItem from="1575690022153" duration="305000" />
       <workItem from="1575690343033" duration="1092000" />
       <workItem from="1575727080804" duration="6416000" />
-      <workItem from="1575947589555" duration="2611000" />
+      <workItem from="1575947589555" duration="3497000" />
     </task>
     <servers />
   </component>

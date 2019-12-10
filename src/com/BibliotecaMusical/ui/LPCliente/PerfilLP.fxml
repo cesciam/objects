@@ -26,10 +26,9 @@
       <Label fx:id="txtNombreLP" layoutX="462.0" layoutY="113.0" />
       <TableView fx:id="tb_Canciones" layoutX="348.0" layoutY="212.0" prefHeight="399.0" prefWidth="617.0">
         <columns>
-          <TableColumn fx:id="col_nombre" prefWidth="138.0" text="Nombre" />
-          <TableColumn fx:id="col_artista" prefWidth="139.0" text="Artista" />
-            <TableColumn fx:id="col_btnCola" prefWidth="165.0" text="Agregar a cola" />
-            <TableColumn fx:id="col_btnEliminar" prefWidth="174.0" text="Eliminar" />
+          <TableColumn fx:id="col_nombre" prefWidth="237.0" text="Nombre" />
+            <TableColumn fx:id="col_btnCola" prefWidth="158.0" text="Agregar a cola" />
+            <TableColumn fx:id="col_btnEliminar" prefWidth="221.0" text="Eliminar" />
         </columns>
       </TableView>
       <Button layoutX="348.0" layoutY="155.0" mnemonicParsing="false" onAction="#agregarCancion" text="Agregar canción" />

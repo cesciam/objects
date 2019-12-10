@@ -26,7 +26,6 @@ public class PerfilLP implements Initializable {
     public Label txtNombreLP;
     public TableView tb_Canciones;
     public TableColumn col_nombre;
-    public TableColumn col_artista;
     public TableColumn col_btnCola;
     public TableColumn col_btnEliminar;
     private ListaReproducción listaReproducción;
@@ -56,7 +55,6 @@ public class PerfilLP implements Initializable {
             e.printStackTrace();
         }
         col_nombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
-        col_artista.setCellValueFactory(new PropertyValueFactory<>("artista"));
         col_btnCola.setCellValueFactory(new PropertyValueFactory<>("agregarCola"));
         col_btnEliminar.setCellValueFactory(new PropertyValueFactory<>("eliminar"));
         tb_Canciones.setItems(lpCancionsList);
