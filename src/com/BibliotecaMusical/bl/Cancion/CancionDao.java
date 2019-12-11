@@ -33,6 +33,24 @@ public class CancionDao implements ICancionDao {
     }
 
     @Override
+    public void registrarCancionCli(Cancion cancion) {
+        try {
+            Connection connection = getConnection();
+            PreparedStatement ps = connection.prepareStatement("insert into usuario_has_cancion(usuario_idusuario, cancion_idcancion) values (?,?)");
+            ps.setInt(1, Usuario.getInstance().getIdUsuario());
+            ResultSet rs = connection.createStatement().executeQuery("select * from cancion as c where c.nombre = '"+cancion.getNombre()+"'");
+            rs.next();
+            cancion.setIdCancion(rs.getInt("idcancion"));
+
+            ps.setInt(2, cancion.getIdCancion());
+            int res = ps.executeUpdate();
+
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+    @Override
     public void registrar(Object o) {
         Cancion cancion = (Cancion) o;
         try {
@@ -43,10 +61,8 @@ public class CancionDao implements ICancionDao {
             ps.setDate(3, Date.valueOf(cancion.getFechaLanzamiento()));
             ps.setInt(4, cancion.getCalificacion());
             ps.setString(5, cancion.getGenero().toString());
-            ps.setString(6, "DEBO LISTAR COMPOSITORES");
+            ps.setString(6, cancion.getCompositor().getNombre());
             ps.setString(7, cancion.getArtista().toString());
-
-            //ps.setString(6, cancion.getCompositor().toString());
 
             int res = ps.executeUpdate();
 

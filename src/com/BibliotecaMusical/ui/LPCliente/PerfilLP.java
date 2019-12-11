@@ -48,6 +48,8 @@ public class PerfilLP implements Initializable {
 
 
     public void actualizarTabla(ActionEvent actionEvent) {
+
+        tb_Canciones.getItems().clear();
         ObservableList<Cancion> lpCancionsList = null;
         try {
             lpCancionsList = controlador.ListarCancionesLP(listaReproducción.getIdlp());

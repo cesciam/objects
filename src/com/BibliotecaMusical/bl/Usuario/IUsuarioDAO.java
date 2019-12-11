@@ -1,5 +1,7 @@
 package com.BibliotecaMusical.bl.Usuario;
 
+import java.sql.SQLException;
+
 public interface IUsuarioDAO<T> {
 
     void guardar(T t);
@@ -8,4 +10,5 @@ public interface IUsuarioDAO<T> {
     void buscar(T t);
     boolean login(String usuario, String contrasenna);
 
+    boolean buscarAdmin() throws SQLException;
 }

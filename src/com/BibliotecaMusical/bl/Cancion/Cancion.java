@@ -19,6 +19,16 @@ public class Cancion {
     private Artista artista;
     private Button agregarCola;
     private Button eliminar;
+    private String artistaName;
+    private String generoName;
+
+    public String getGeneroName() {
+        return genero.toString();
+    }
+
+    public String getArtistaName() {
+        return artista.toString();
+    }
 
     public Button getAgregarCola() {
         return agregarCola;

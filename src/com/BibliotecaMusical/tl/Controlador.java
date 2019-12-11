@@ -11,6 +11,7 @@ import com.BibliotecaMusical.bl.Genero.Genero;
 import com.BibliotecaMusical.bl.Genero.IGeneroDAO;
 import com.BibliotecaMusical.bl.ListaReproduccion.IListaReproduccionDAO;
 import com.BibliotecaMusical.bl.ListaReproduccion.ListaReproducción;
+import com.BibliotecaMusical.bl.Usuario.Administrador;
 import com.BibliotecaMusical.bl.Usuario.Cliente;
 import com.BibliotecaMusical.bl.Usuario.IUsuarioDAO;
 import com.BibliotecaMusical.bl.Usuario.Usuario;
@@ -53,10 +54,9 @@ public class Controlador {
         }
     }
 
-    public void comprobarAdministrador(){
-
-        //Aqui va la comprobacion de la existencia de un administrador para poder ejecutar la app
-
+    public boolean comprobarAdministrador() throws SQLException {
+        boolean existe = usuarioDAO.buscarAdmin();
+        return existe;
     }
 
     public boolean iniciarSesion(String usuario, String contrasenna) throws SQLException {
@@ -116,6 +116,7 @@ public class Controlador {
     public void registrarCancion(String nombre, String pathCancion, LocalDate fechaLanzamiento, int calificacion, Genero genero, Compositor compositor, Artista artista) {
         Cancion cancion = new Cancion(nombre, pathCancion, fechaLanzamiento,calificacion, genero, compositor, artista);
         cancionDao.registrar(cancion);
+        cancionDao.registrarCancionCli(cancion);
     }
 
     public ObservableList<Compositor> listaCompositor() {
@@ -144,6 +145,9 @@ public class Controlador {
         ArrayList<Cancion> canciones = cancionDao.cancionesUsuario();
 
         for (Cancion cancion: canciones){
+            Button button = new Button();
+            button.setText("Agregar a cola");
+            cancion.setAgregarCola(button);
             listaCancionesUsuario.add(cancion);
         }
 
@@ -168,5 +172,11 @@ public class Controlador {
         }
 
         return listaCancionesUsuario;
+    }
+
+
+    public void registrarAdmin(String nombre, String apellidos, String nombreUsuario, String contrasenna, String email, String pathImg) {
+        Administrador administrador = new Administrador(nombre, apellidos, pathImg, nombreUsuario, contrasenna, email, "Admin");
+        usuarioDAO.guardar(administrador);
     }
 }

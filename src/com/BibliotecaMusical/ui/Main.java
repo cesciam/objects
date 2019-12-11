@@ -17,7 +17,6 @@ public class Main extends Application {
         primaryStage.setTitle("Biblioteca Musical");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
-        controlador.comprobarAdministrador();
     }
 
     public static void main(String[] args) {

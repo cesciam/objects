@@ -7,4 +7,6 @@ public interface ICancionDao<T> {
     void registrar(T t);
 
     ArrayList<Cancion> cancionesUsuario() throws SQLException;
+
+    void registrarCancionCli(Cancion cancion);
 }

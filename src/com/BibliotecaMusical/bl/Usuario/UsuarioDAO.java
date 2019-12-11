@@ -1,6 +1,7 @@
 package com.BibliotecaMusical.bl.Usuario;
 
 
+import com.BibliotecaMusical.bl.Genero.Genero;
 import com.BibliotecaMusical.dl.ConnecionBD;
 
 
@@ -20,6 +21,22 @@ public class UsuarioDAO implements IUsuarioDAO<Usuario> {
         Connection conn = null;
         conn = ConnecionBD.getInstance().getConnection();
         return conn;
+    }
+
+    @Override
+    public boolean buscarAdmin() throws SQLException {
+        boolean existe = false;
+        Connection connection = getConnection();
+        ResultSet rs = connection.createStatement().executeQuery("select * from usuario ");
+
+        while (rs.next()){
+                Usuario usuario = new Usuario(rs.getString("nombre"), rs.getString("apellidos"), rs.getString("imagen"),rs.getString("nombreUsuario"), rs.getString("contrasenna"), rs.getString("correo"), rs.getString("tipo"));
+                if (usuario.getTipo().equals("Admin")){
+                    return true;
+                }
+        }
+
+        return existe;
     }
 
     @Override
@@ -43,6 +60,23 @@ public class UsuarioDAO implements IUsuarioDAO<Usuario> {
 
                 int res = ps.executeUpdate();
 
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }else {
+            Administrador administrador = (Administrador) usuario;
+            try {
+                connection = getConnection();
+                ps = connection.prepareStatement("INSERT INTO usuario(nombre, apellidos, imagen, nombreUsuario, contrasenna, correo, tipo) VALUES (?,?,?,?,?,?,?)");
+                ps.setString(1, administrador.getNombre());
+                ps.setString(2, administrador.getApellidos());
+                ps.setString(3, administrador.getImg());
+                ps.setString(4, administrador.getNombreUsuario());
+                ps.setString(5, administrador.getContrasenna());
+                ps.setString(6, administrador.getCorreo());
+                ps.setString(7, administrador.getTipo());
+
+                int res = ps.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
             }

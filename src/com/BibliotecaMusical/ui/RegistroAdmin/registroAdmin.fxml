@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="483.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.BibliotecaMusical.ui.RegistroAdmin.RegistroAdmin">
+   <children>
+      <Label layoutX="37.0" layoutY="37.0" text="Nombre:" />
+      <TextField fx:id="txtNombre" layoutX="181.0" layoutY="33.0" />
+      <TextField fx:id="txtApellidos" layoutX="181.0" layoutY="77.0" />
+      <TextField fx:id="txtNombreUsuario" layoutX="181.0" layoutY="121.0" />
+      <Label layoutX="37.0" layoutY="81.0" text="Apellidos:" />
+      <Label layoutX="37.0" layoutY="125.0" text="Nomdre de usuario:" />
+      <TextField fx:id="txtContrasenna" layoutX="181.0" layoutY="165.0" />
+      <Label layoutX="37.0" layoutY="169.0" text="Contraseña:" />
+      <Label layoutX="395.0" layoutY="37.0" text="Avatar:" />
+      <ImageView fx:id="imagePreview" fitHeight="150.0" fitWidth="200.0" layoutX="457.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../img/Carga-01.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="674.0" layoutY="42.0" mnemonicParsing="false" onAction="#subirImgaen" text="Subir imagen" />
+      <Label layoutX="37.0" layoutY="213.0" text="Email:" />
+      <TextField fx:id="txtEmail" layoutX="182.0" layoutY="209.0" />
+      <Button layoutX="497.0" layoutY="283.0" mnemonicParsing="false" onAction="#registrarUsuario" prefHeight="53.0" prefWidth="120.0" text="Registrar" />
+      <Label layoutX="170.0" layoutY="169.0" text="**" />
+      <Text layoutX="34.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="**La contraseña deberá tener un mínimo de 8 caracteres, y un máximo de 12, con al menos una letra mayúscula, una letra minúscula y un carácter especial." wrappingWidth="271.330078125" />
+      <Button layoutX="35.0" layoutY="438.0" mnemonicParsing="false" onAction="#volverInicio" text="Volver" />
+   </children>
+</AnchorPane>

@@ -1,66 +1,38 @@
-package com.BibliotecaMusical.ui.RegistroCliente;
+package com.BibliotecaMusical.ui.RegistroAdmin;
 
 import com.BibliotecaMusical.tl.Controlador;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
-
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
-
 import java.nio.file.Files;
 
-import java.util.Locale;
-
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-public class RegistroCliente {
-
-
-    Controlador controlador = new Controlador();
-
-    public ComboBox CBpaises;
-    public ImageView imagePreview;
+public class RegistroAdmin {
     public TextField txtNombre;
     public TextField txtApellidos;
     public TextField txtNombreUsuario;
     public TextField txtContrasenna;
+    public ImageView imagePreview;
     public TextField txtEmail;
-    public TextField txtIdentifacion;
-    public TextField txtEdad;
     Image img;
     String pathImg = "";
-
-
-
-    public void listarPaises(MouseEvent mouseEvent) throws IOException {
-        ObservableList<String> countries = Stream.of(Locale.getISOCountries())
-                .map(locales -> new Locale("", locales))
-                .map(Locale::getDisplayCountry)
-                .collect(Collectors.toCollection(FXCollections::observableArrayList));
-        CBpaises.setItems(countries);
-    }
+    Controlador controlador = new Controlador();
 
     public void subirImgaen(ActionEvent actionEvent) throws IOException {
-        Scene scene = CBpaises.getScene();
+        Scene scene = txtNombre.getScene();
         Window window = scene.getWindow();
         Stage stage = (Stage) window;
 
@@ -76,17 +48,14 @@ public class RegistroCliente {
         pathImg = selectedFile.toPath().toString();
     }
 
-    public void registrarUsuario(ActionEvent actionEvent) {
+    public void registrarUsuario(ActionEvent actionEvent) throws IOException {
         String nombre =txtNombre.getText();
         String apellidos = txtApellidos.getText();
         String nombreUsuario = txtNombreUsuario.getText();
         String contrasenna = txtContrasenna.getText();
-        String edad = txtEdad.getText();
-        String pais = (String) CBpaises.getValue();
         String email = txtEmail.getText();
-        String identificacion = txtIdentifacion.getText();
 
-        boolean error = validarDatos(nombre, apellidos, nombreUsuario, contrasenna,edad, pais, email, identificacion, pathImg);
+        boolean error = validarDatos(nombre, apellidos, nombreUsuario, contrasenna, email, pathImg);
         error = validarContrasenna(contrasenna);
         if (error){
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -95,36 +64,37 @@ public class RegistroCliente {
             alert.setContentText("Revise los campos marcados en rojo.");
             alert.show();
         }else {
-            controlador.registrarCliente(nombre, apellidos, nombreUsuario, contrasenna,edad, pais, email, identificacion, pathImg);
+            controlador.registrarAdmin(nombre, apellidos, nombreUsuario, contrasenna, email, pathImg);
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Registro");
             alert.setHeaderText("Registro de cliente");
             alert.setContentText("El usuario ha sido registrado y se envio la informacion al correo.");
             alert.show();
             limpiarCajas();
+            Scene scene = txtEmail.getScene();
+            Window window = scene.getWindow();
+            Stage stage = (Stage) window;
+            Parent root = FXMLLoader.load(getClass().getResource("../InicioSesion/inicioSesion.fxml"));
+            stage.setScene(new Scene(root));
         }
-
     }
 
-    private boolean validarContrasenna(String contrasenna) {
-        
-
-        return false;
+    public void volverInicio(ActionEvent actionEvent) throws IOException {
+        Scene scene = txtNombre.getScene();
+        Window window = scene.getWindow();
+        Stage stage = (Stage) window;
+        Parent root = FXMLLoader.load(getClass().getResource("../InicioSesion/inicioSesion.fxml"));
+        stage.setScene(new Scene(root));
     }
-
     private void limpiarCajas() {
-        CBpaises.setValue(null);
         imagePreview.setImage(null);
         txtNombre.setText(null);
         txtApellidos.setText(null);
         txtNombreUsuario.setText(null);
         txtContrasenna.setText(null);
         txtEmail.setText(null);
-        txtIdentifacion.setText(null);
-        txtEdad.setText(null);
     }
-
-    private boolean validarDatos(String nombre, String apellidos, String nombreUsuario, String contrasenna, String edad, String pais, String email, String identificacion, String imagen) {
+    private boolean validarDatos(String nombre, String apellidos, String nombreUsuario, String contrasenna, String email, String imagen) {
         boolean error = false;
         Border redBorder = new Border(new BorderStroke(Color.RED, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT));
 
@@ -154,42 +124,14 @@ public class RegistroCliente {
         }else {
             txtContrasenna.setBorder(null);
         }
-        if (edad.equals("")){
-            error = true;
-            txtEdad.setBorder(redBorder);
-        }else {
-            txtEdad.setBorder(null);
-        }
-        if (pais == null){
-            error = true;
-            CBpaises.setBorder(redBorder);
-        }else{
-            CBpaises.setBorder(null);
-        }
-        if (email.equals("")){
-            error = true;
-            txtEmail.setBorder(redBorder);
-        }else {
-            txtEmail.setBorder(null);
-        }
-        if (identificacion.equals("")){
-            error = true;
-            txtIdentifacion.setBorder(redBorder);
-        }
-        else {
-            txtIdentifacion.setBorder(null);
-        }
         if (imagen.equals("")){
             error= true;
         }
         return error;
     }
+    private boolean validarContrasenna(String contrasenna) {
 
-    public void volverInicio(ActionEvent actionEvent) throws IOException {
-        Scene scene = CBpaises.getScene();
-        Window window = scene.getWindow();
-        Stage stage = (Stage) window;
-        Parent root = FXMLLoader.load(getClass().getResource("../InicioSesion/inicioSesion.fxml"));
-        stage.setScene(new Scene(root));
+
+        return false;
     }
 }
