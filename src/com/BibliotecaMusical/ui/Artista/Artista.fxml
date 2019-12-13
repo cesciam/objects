@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="521.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.BibliotecaMusical.ui.Artista.Artista">
+   <children>
+      <Label layoutX="42.0" layoutY="45.0" text="Nombre:" />
+      <TextField fx:id="txt_nombre" layoutX="181.0" layoutY="41.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label layoutX="42.0" layoutY="85.0" text="Apellidos:" />
+      <TextField fx:id="txt_apellidos" layoutX="181.0" layoutY="81.0" prefHeight="25.0" prefWidth="174.0" />
+      <Text layoutX="43.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre artistico:" />
+      <TextField fx:id="txt_nombreArtistico" layoutX="181.0" layoutY="116.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label layoutX="43.0" layoutY="154.0" text="Fecha nacimiento:" />
+      <DatePicker fx:id="dp_fachaNac" layoutX="181.0" layoutY="150.0" />
+      <Label layoutX="45.0" layoutY="191.0" text="Fecha defunción:" />
+      <DatePicker fx:id="dp_FechaDead" layoutX="181.0" layoutY="187.0" />
+      <ComboBox fx:id="cb_paises" layoutX="181.0" layoutY="231.0" onMouseClicked="#listarPaises" prefHeight="25.0" prefWidth="174.0" promptText="Pais" />
+      <Label layoutX="45.0" layoutY="235.0" text="País:" />
+      <Label layoutX="48.0" layoutY="285.0" text="Genero:" />
+      <TextField fx:id="txt_edad" layoutX="181.0" layoutY="322.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label layoutX="52.0" layoutY="326.0" text="Edad" />
+      <Label layoutX="48.0" layoutY="362.0" text="Descripción" />
+      <TextArea fx:id="txt_descripcion" layoutX="181.0" layoutY="371.0" prefHeight="60.0" prefWidth="200.0" />
+      <ComboBox fx:id="cb_generos" layoutX="181.0" layoutY="281.0" onMouseClicked="#listarGeneros" prefHeight="25.0" prefWidth="174.0" />
+      <Button layoutX="375.0" layoutY="461.0" mnemonicParsing="false" onAction="#registrarCancion" text="Registrar" />
+   </children>
+</AnchorPane>

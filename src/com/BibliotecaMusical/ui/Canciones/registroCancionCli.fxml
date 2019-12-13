@@ -36,7 +36,7 @@
       <Label layoutX="329.0" layoutY="357.0" text="Canción" />
       <TextField fx:id="txt_pathCancion" disable="true" layoutX="467.0" layoutY="353.0" prefHeight="25.0" prefWidth="174.0" />
       <Button layoutX="686.0" layoutY="133.0" mnemonicParsing="false" onAction="#registroGenero" prefHeight="25.0" prefWidth="128.0" text="Registrar género" />
-      <Button layoutX="686.0" layoutY="188.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" text="Registrar artista" />
+      <Button layoutX="686.0" layoutY="188.0" mnemonicParsing="false" onAction="#registrarArtista" prefHeight="25.0" prefWidth="128.0" text="Registrar artista" />
       <Button layoutX="686.0" layoutY="353.0" mnemonicParsing="false" onAction="#subirCancion" text="Seleccionar canción..." />
       <Button layoutX="577.0" layoutY="526.0" mnemonicParsing="false" onAction="#registrarCancion" prefHeight="54.0" prefWidth="203.0" text="Registrar" />
       <Label layoutX="329.0" layoutY="412.0" text="Compositor" />

@@ -184,4 +184,9 @@ public class Controlador {
         Genero genero = new Genero(nombre, descripcion);
         generoDAO.guardar(genero);
     }
+
+    public void registrarArtista(String nombre, String apellidos, String nombreArtistico, LocalDate fechaNac, LocalDate fechaDead, String pais, String genero, int edad, String descripcion) {
+        Artista artista = new Artista(nombre, apellidos, nombreArtistico, fechaNac, fechaDead, pais, genero, edad, descripcion);
+        artistaDao.registrar(artista);
+    }
 }

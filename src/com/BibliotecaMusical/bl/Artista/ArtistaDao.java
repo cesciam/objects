@@ -2,9 +2,7 @@ package com.BibliotecaMusical.bl.Artista;
 
 import com.BibliotecaMusical.dl.ConnecionBD;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class ArtistaDao implements IArtistaDao {
@@ -17,6 +15,24 @@ public class ArtistaDao implements IArtistaDao {
 
     @Override
     public void registrar(Object o) {
+        Artista artista = (Artista) o;
+        try {
+            Connection connection = getConnection();
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO artista(nombre, apellidos,nombreArtistico, fechaNacimiento, fechaDefuncion, pais, genero, edad,descripcion) VALUES(?,?,?,?,?,?,?,?,?)");
+            ps.setString(1, artista.getNombre());
+            ps.setString(2, artista.getApellidos());
+            ps.setString(3, artista.getNombreArtisto());
+            ps.setDate(4,  Date.valueOf(artista.getFechaNacimiento()));
+            ps.setDate(5,  Date.valueOf(artista.getFechaDefuncion()));
+            ps.setString(6, artista.getPais());
+            ps.setString(7, artista.getGenero());
+            ps.setInt(8, artista.getEdad());
+            ps.setString(9, artista.getDescripcion());
+            int res = ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 
