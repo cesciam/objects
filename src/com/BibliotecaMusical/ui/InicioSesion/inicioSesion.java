@@ -83,6 +83,12 @@ public class inicioSesion implements Initializable {
                     Stage stage = (Stage) window;
                     Parent root = FXMLLoader.load(getClass().getResource("../inicioCliente/inicioCliente.fxml"));
                     stage.setScene(new Scene(root));
+                }else {
+                    Scene scene = btnRegistro.getScene();
+                    Window window = scene.getWindow();
+                    Stage stage = (Stage) window;
+                    Parent root = FXMLLoader.load(getClass().getResource("../inicioAdmin/inicioAdmin.fxml"));
+                    stage.setScene(new Scene(root));
                 }
             }else{
                 Alert alert = new Alert(Alert.AlertType.WARNING);

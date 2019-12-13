@@ -5,6 +5,7 @@ import com.BibliotecaMusical.bl.Usuario.Usuario;
 import com.BibliotecaMusical.dl.ConnecionBD;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -38,5 +39,20 @@ public class GeneroDao implements IGeneroDAO {
             e.printStackTrace();
         }
         return listaGenero;
+    }
+
+    @Override
+    public void guardar(Genero genero) {
+        try {
+            Connection connection = getConnection();
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO genero(nombre, descripcion) VALUES(?,?)");
+            ps.setString(1, genero.getNombre());
+            ps.setString(2, genero.getDescripcion());
+
+            int res = ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

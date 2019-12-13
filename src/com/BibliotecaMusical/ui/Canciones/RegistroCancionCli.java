@@ -118,4 +118,12 @@ public class RegistroCancionCli {
         Parent root = FXMLLoader.load(getClass().getResource("../inicioCliente/inicioCliente.fxml"));
         stage.setScene(new Scene(root));
     }
+
+    public void registroGenero(ActionEvent actionEvent) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("../Genero/Genero.fxml"));
+        stage.setTitle("Biblioteca Musical");
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
 }

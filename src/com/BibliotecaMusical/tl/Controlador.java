@@ -179,4 +179,9 @@ public class Controlador {
         Administrador administrador = new Administrador(nombre, apellidos, pathImg, nombreUsuario, contrasenna, email, "Admin");
         usuarioDAO.guardar(administrador);
     }
+
+    public void registrarGenero(String nombre, String descripcion) {
+        Genero genero = new Genero(nombre, descripcion);
+        generoDAO.guardar(genero);
+    }
 }
