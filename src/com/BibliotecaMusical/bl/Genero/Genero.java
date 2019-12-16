@@ -1,5 +1,7 @@
 package com.BibliotecaMusical.bl.Genero;
 
+import javafx.scene.control.Button;
+
 import java.util.Objects;
 
 public class Genero {
@@ -7,6 +9,26 @@ public class Genero {
     private int id;
     private String nombre;
     private String descripcion;
+    private Button eliminar;
+    private Button modificar;
+
+
+
+    public Button getEliminar() {
+        return eliminar;
+    }
+
+    public void setEliminar(Button eliminar) {
+        this.eliminar = eliminar;
+    }
+
+    public Button getModificar() {
+        return modificar;
+    }
+
+    public void setModificar(Button modificar) {
+        this.modificar = modificar;
+    }
 
     public Genero(String nombre) {
         this.nombre = nombre;

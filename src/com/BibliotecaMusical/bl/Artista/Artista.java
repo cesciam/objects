@@ -1,5 +1,7 @@
 package com.BibliotecaMusical.bl.Artista;
 
+import javafx.scene.control.Button;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -15,6 +17,24 @@ public class Artista {
     private String genero;
     private int edad;
     private String descripcion;
+    private Button eliminar;
+    private Button modificar;
+
+    public Button getEliminar() {
+        return eliminar;
+    }
+
+    public void setEliminar(Button eliminar) {
+        this.eliminar = eliminar;
+    }
+
+    public Button getModificar() {
+        return modificar;
+    }
+
+    public void setModificar(Button modificar) {
+        this.modificar = modificar;
+    }
 
     public Artista(String nombre) {
         this.nombre = nombre;

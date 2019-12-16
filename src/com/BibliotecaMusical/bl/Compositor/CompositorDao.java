@@ -2,9 +2,7 @@ package com.BibliotecaMusical.bl.Compositor;
 
 import com.BibliotecaMusical.dl.ConnecionBD;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class CompositorDao implements ICompositorDao{
@@ -31,5 +29,24 @@ public class CompositorDao implements ICompositorDao{
             e.printStackTrace();
         }
         return listaCompositor;
+    }
+
+    @Override
+    public void registrarCompositor(Compositor compositor) {
+        try {
+            Connection connection = getConnection();
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO compositor(nombre, apellidos,pais, edad, generos) VALUES(?,?,?,?,?)");
+            ps.setString(1, compositor.getNombre());
+            ps.setString(2, compositor.getApellidos());
+            ps.setString(3, compositor.getPais());
+            ps.setInt(4, compositor.getEdad());
+            ps.setString(5, compositor.getGenero());
+
+            int res = ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
     }
 }

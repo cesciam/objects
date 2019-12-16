@@ -5,11 +5,11 @@ import com.BibliotecaMusical.tl.Controlador;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
+import javafx.stage.Window;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -17,7 +17,7 @@ import java.util.Locale;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Artista {
+public class ArtistaRegistro {
 
     public ComboBox cb_paises;
     public TextField txt_nombre;
@@ -54,6 +54,17 @@ public class Artista {
         String descripcion = txt_descripcion.getText();
 
         controlador.registrarArtista(nombre, apellidos, nombreArtistico, fechaNac, fechaDead, pais, genero, edad, descripcion);
+
+        Scene scene = cb_generos.getScene();
+        Window window = scene.getWindow();
+        Stage stage = (Stage) window;
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Registro correcto");
+        alert.setHeaderText("El genero ha sido registrada!");
+        alert.setContentText("El genero ha sido registrada de manera exitosa.");
+        alert.show();
+
 
     }
 

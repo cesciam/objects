@@ -7,7 +7,7 @@
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.BibliotecaMusical.ui.Genero.GeneroAdmin">
+<AnchorPane prefHeight="700.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.BibliotecaMusical.ui.Compositor.CompositorAdmin">
    <children>
       <AnchorPane layoutY="8.0" prefHeight="700.0" prefWidth="254.0">
          <effect>
@@ -24,16 +24,16 @@
             <Button layoutY="575.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="254.0" text="Cerrar sesión" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
          </children>
       </AnchorPane>
-      <TableView fx:id="tableGeneros" layoutX="325.0" layoutY="206.0" prefHeight="398.0" prefWidth="605.0">
-        <columns>
-          <TableColumn fx:id="colNombre" prefWidth="151.0" text="Nombre" />
-          <TableColumn fx:id="colDescripcion" minWidth="0.0" prefWidth="110.0" text="Descripcion" />
+      <TableView fx:id="tableGCompositores" layoutX="325.0" layoutY="206.0" prefHeight="398.0" prefWidth="605.0">
+         <columns>
+            <TableColumn fx:id="colNombre" prefWidth="151.0" text="Nombre" />
+            <TableColumn fx:id="colPais" minWidth="0.0" prefWidth="110.0" text="Pais" />
             <TableColumn fx:id="colEliminar" minWidth="0.0" prefWidth="154.0" text="Eliminar" />
             <TableColumn fx:id="colModificar" minWidth="0.0" prefWidth="188.0" text="Modificar" />
-        </columns>
+         </columns>
       </TableView>
       <TextField layoutX="325.0" layoutY="150.0" prefHeight="25.0" prefWidth="407.0" text="Buscar..." />
-      <Button fx:id="btn_registraGenero" layoutX="847.0" layoutY="150.0" mnemonicParsing="false" onAction="#registrarGenero" text="Registrar" />
+      <Button fx:id="btn_registraGenero" layoutX="847.0" layoutY="150.0" mnemonicParsing="false" onAction="#registrarCompositor" text="Registrar" />
       <Button layoutX="751.0" layoutY="150.0" mnemonicParsing="false" text="Buscar" />
       <Button layoutX="938.0" layoutY="150.0" mnemonicParsing="false" onAction="#actualizarTabla" text="Actualizar" />
    </children>

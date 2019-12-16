@@ -41,6 +41,6 @@
       <Button layoutX="577.0" layoutY="526.0" mnemonicParsing="false" onAction="#registrarCancion" prefHeight="54.0" prefWidth="203.0" text="Registrar" />
       <Label layoutX="329.0" layoutY="412.0" text="Compositor" />
       <ComboBox fx:id="cb_compositor" layoutX="467.0" layoutY="408.0" onMouseClicked="#listarCompositores" prefHeight="25.0" prefWidth="174.0" promptText="Seleccione un compositor o..." />
-      <Button layoutX="686.0" layoutY="408.0" mnemonicParsing="false" onAction="#subirCancion" text="Registrar compositor" />
+      <Button layoutX="686.0" layoutY="408.0" mnemonicParsing="false" onAction="#RegistraCompositor" text="Registrar compositor" />
    </children>
 </AnchorPane>

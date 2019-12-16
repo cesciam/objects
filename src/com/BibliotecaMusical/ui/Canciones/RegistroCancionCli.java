@@ -134,4 +134,12 @@ public class RegistroCancionCli {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
+    public void RegistraCompositor(ActionEvent actionEvent) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("../Compositor/registroCompositor.fxml"));
+        stage.setTitle("Biblioteca Musical");
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
 }

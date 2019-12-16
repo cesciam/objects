@@ -96,6 +96,15 @@ public class Controlador {
         ArrayList<Genero> generos = generoDAO.listar();
 
         for (Genero genero: generos){
+            Button eliminar = new Button();
+            eliminar.setText("Eliminar");
+
+            Button modificar = new Button();
+            modificar.setText("Modificar");
+
+            genero.setEliminar(eliminar);
+            genero.setModificar(modificar);
+
             listaGeneros.add(genero);
         }
 
@@ -107,6 +116,15 @@ public class Controlador {
         ArrayList<Artista> artistas = artistaDao.listar();
 
         for (Artista artista: artistas){
+
+            Button eliminar = new Button();
+            eliminar.setText("Eliminar");
+
+            Button modificar = new Button();
+            modificar.setText("Modificar");
+
+            artista.setEliminar(eliminar);
+            artista.setModificar(modificar);
             listaArtistas.add(artista);
         }
 
@@ -124,6 +142,14 @@ public class Controlador {
         ArrayList<Compositor> compositors =compositorDao.listar();
 
         for (Compositor compositor: compositors){
+            Button eliminar = new Button();
+            eliminar.setText("Eliminar");
+
+            Button modificar = new Button();
+            modificar.setText("Modificar");
+
+            compositor.setEliminar(eliminar);
+            compositor.setModificar(modificar);
             listaCompositor.add(compositor);
         }
 
@@ -188,5 +214,12 @@ public class Controlador {
     public void registrarArtista(String nombre, String apellidos, String nombreArtistico, LocalDate fechaNac, LocalDate fechaDead, String pais, String genero, int edad, String descripcion) {
         Artista artista = new Artista(nombre, apellidos, nombreArtistico, fechaNac, fechaDead, pais, genero, edad, descripcion);
         artistaDao.registrar(artista);
+    }
+
+    public void registrarCompositor(String nombre, String apellidos, String paises, String edad, String genero) {
+        int edadint = Integer.valueOf(edad);
+        Compositor compositor = new Compositor(nombre, apellidos, paises, edadint, genero);
+        compositorDao.registrarCompositor(compositor);
+
     }
 }

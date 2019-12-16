@@ -1,6 +1,7 @@
 package com.BibliotecaMusical.bl.Compositor;
 
 import com.BibliotecaMusical.bl.Genero.Genero;
+import javafx.scene.control.Button;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -11,6 +12,41 @@ public class Compositor {
     private String pais;
     private int edad;
     private ArrayList<Genero> generos;
+    private String genero;
+    private Button eliminar;
+    private Button modificar;
+
+    public Compositor(String nombre, String apellidos, String pais, int edad, String genero) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.pais = pais;
+        this.edad = edad;
+        this.genero = genero;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public Button getModificar() {
+        return modificar;
+    }
+
+    public void setModificar(Button modificar) {
+        this.modificar = modificar;
+    }
+
+    public Button getEliminar() {
+        return eliminar;
+    }
+
+    public void setEliminar(Button eliminar) {
+        this.eliminar = eliminar;
+    }
 
     public Compositor(String nombre) {
         this.nombre = nombre;

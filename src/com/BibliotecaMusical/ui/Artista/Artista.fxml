@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="521.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.BibliotecaMusical.ui.Artista.Artista">
+<AnchorPane prefHeight="521.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.BibliotecaMusical.ui.Artista.ArtistaRegistro">
    <children>
       <Label layoutX="42.0" layoutY="45.0" text="Nombre:" />
       <TextField fx:id="txt_nombre" layoutX="181.0" layoutY="41.0" prefHeight="25.0" prefWidth="174.0" />

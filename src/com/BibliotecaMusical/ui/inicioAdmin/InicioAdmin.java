@@ -20,4 +20,21 @@ public class InicioAdmin {
         Parent root = FXMLLoader.load(getClass().getResource("../Genero/generoAdmin.fxml"));
         stage.setScene(new Scene(root));
     }
+
+    public void compositorLista(ActionEvent actionEvent) throws IOException {
+        Scene scene = btn_genero.getScene();
+        Window window = scene.getWindow();
+        Stage stage = (Stage) window;
+        Parent root = FXMLLoader.load(getClass().getResource("../Compositor/CompositorAdmin.fxml"));
+        stage.setScene(new Scene(root));
+    }
+
+
+    public void artistaLista(ActionEvent actionEvent) throws IOException {
+        Scene scene = btn_genero.getScene();
+        Window window = scene.getWindow();
+        Stage stage = (Stage) window;
+        Parent root = FXMLLoader.load(getClass().getResource("../Artista/ArtistaAdmin.fxml"));
+        stage.setScene(new Scene(root));
+    }
 }
