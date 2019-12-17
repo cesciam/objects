@@ -161,4 +161,37 @@ public class RegistroCancionCli {
         Parent root = FXMLLoader.load(getClass().getResource("/com/BibliotecaMusical/ui/InicioSesion/inicioSesion.fxml"));
         stage.setScene(new Scene(root));
     }
+
+    public void inicionCliente(ActionEvent actionEvent) throws IOException {
+
+        Scene scene = dp_fecha.getScene();
+        Window window = scene.getWindow();
+        Stage stage = (Stage) window;
+        Parent root = FXMLLoader.load(getClass().getResource("../inicioAdmin/inicioAdmin.fxml"));
+        stage.setScene(new Scene(root));
+    }
+
+    public void generoLista(ActionEvent actionEvent) throws IOException {
+        Scene scene = dp_fecha.getScene();
+        Window window = scene.getWindow();
+        Stage stage = (Stage) window;
+        Parent root = FXMLLoader.load(getClass().getResource("../Genero/generoAdmin.fxml"));
+        stage.setScene(new Scene(root));
+    }
+
+    public void compositorLista(ActionEvent actionEvent) throws IOException {
+        Scene scene = dp_fecha.getScene();
+        Window window = scene.getWindow();
+        Stage stage = (Stage) window;
+        Parent root = FXMLLoader.load(getClass().getResource("../Compositor/CompositorAdmin.fxml"));
+        stage.setScene(new Scene(root));
+    }
+
+    public void artistaLista(ActionEvent actionEvent) throws IOException {
+        Scene scene = dp_fecha.getScene();
+        Window window = scene.getWindow();
+        Stage stage = (Stage) window;
+        Parent root = FXMLLoader.load(getClass().getResource("../Artista/ArtistaAdmin.fxml"));
+        stage.setScene(new Scene(root));
+    }
 }

@@ -2,38 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b42fc41a-fee2-44a7-b4b2-452bcdb464f3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Canciones/CancionesAdmin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Canciones/registroCancionesAdmin.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Canciones/registroCancionesAdmin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/bl/Usuario/UsuarioDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/bl/Usuario/UsuarioDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/dl/ConnecionBD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/dl/ConnecionBD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/tl/Controlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/tl/Controlador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/InicioSesion/inicioSesion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/InicioSesion/inicioSesion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/InicioSesion/inicioSesion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/InicioSesion/inicioSesion.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoObjetos/com/BibliotecaMusical/ui/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Artista/ArtistaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Artista/ArtistaDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Artista/IArtistaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Artista/IArtistaDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Compositor/Compositor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Compositor/Compositor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Compositor/CompositorDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Compositor/CompositorDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Compositor/ICompositorDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Compositor/ICompositorDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Genero/Genero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Genero/Genero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Genero/GeneroDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Genero/GeneroDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Genero/IGeneroDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/bl/Genero/IGeneroDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/tl/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/tl/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Artista/ArtistaAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Artista/ArtistaAdmin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Artista/ArtistaAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Artista/ArtistaAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Canciones/ListarCancionesCli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Canciones/ListarCancionesCli.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Canciones/RegistroCancionCli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Canciones/RegistroCancionCli.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Canciones/listarCancionesCli.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Canciones/listarCancionesCli.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Canciones/registroCancionCli.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Canciones/registroCancionCli.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Compositor/CompositorAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Compositor/CompositorAdmin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Compositor/CompositorAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Compositor/CompositorAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Genero/GeneroAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Genero/GeneroAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Genero/generoAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Genero/generoAdmin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/LPCliente/PerfilLP.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/LPCliente/PerfilLP.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/LPCliente/PerfilLP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/LPCliente/PerfilLP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioAdmin/InicioAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioAdmin/InicioAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioAdmin/inicioAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioAdmin/inicioAdmin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioCliente/InicioCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioCliente/InicioCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioCliente/inicioCliente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BibliotecaMusical/ui/inicioCliente/inicioCliente.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -113,7 +86,7 @@
       <workItem from="1575690343033" duration="1092000" />
       <workItem from="1575727080804" duration="6416000" />
       <workItem from="1575947589555" duration="3497000" />
-      <workItem from="1576550543738" duration="5036000" />
+      <workItem from="1576550543738" duration="6046000" />
     </task>
     <servers />
   </component>
@@ -185,6 +158,14 @@
           <url>file://$PROJECT_DIR$/src/com/BibliotecaMusical/tl/Controlador.java</url>
           <line>186</line>
           <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/BibliotecaMusical/ui/Canciones/RegistroCancionCli.java</url>
+          <line>50</line>
+          <properties class="com.BibliotecaMusical.ui.Canciones.RegistroCancionCli" method="subirCancion">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
