@@ -82,7 +82,7 @@ public class InicioAdmin {
         col_genero.setCellValueFactory(new PropertyValueFactory<>("generoName"));
         col_fechaLanzamiento.setCellValueFactory( new PropertyValueFactory<>("fechaLanzamiento"));
         col_calificacion.setCellValueFactory(new PropertyValueFactory<>("calificacion"));
-        col_btnAgregar.setCellValueFactory(new PropertyValueFactory<>("agregarCola"));
+        col_btnAgregar.setCellValueFactory(new PropertyValueFactory<>("eliminar"));
 
         table_canciones.setItems(cancions);
 

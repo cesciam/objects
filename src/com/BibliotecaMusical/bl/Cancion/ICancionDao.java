@@ -11,4 +11,6 @@ public interface ICancionDao<T> {
     void registrarCancionCli(Cancion cancion);
 
     ArrayList<Cancion> listarCanciones() throws SQLException;
+
+    void eliminar(int idCancion);
 }

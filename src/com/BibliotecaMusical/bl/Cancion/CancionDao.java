@@ -83,4 +83,16 @@ public class CancionDao implements ICancionDao {
 
         return cancions;
     }
+
+    @Override
+    public void eliminar(int idCancion) {
+        try {
+            Connection connection = getConnection();
+            PreparedStatement ps = connection.prepareStatement("delete from cancion where idcancion = (?)");
+            ps.setInt(1, idCancion);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

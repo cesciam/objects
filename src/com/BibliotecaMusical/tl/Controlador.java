@@ -15,6 +15,7 @@ import com.BibliotecaMusical.bl.Usuario.Administrador;
 import com.BibliotecaMusical.bl.Usuario.Cliente;
 import com.BibliotecaMusical.bl.Usuario.IUsuarioDAO;
 import com.BibliotecaMusical.bl.Usuario.Usuario;
+import com.BibliotecaMusical.ui.inicioAdmin.InicioAdmin;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Button;
@@ -252,6 +253,11 @@ public class Controlador {
         for (Cancion cancion: cancions){
             Button buttonEliminar = new Button();
             buttonEliminar.setText("Eliminar");
+            buttonEliminar.setOnAction(event -> {
+                eliminarCancion(cancion.getIdCancion());
+                InicioAdmin inicioAdmin = new InicioAdmin();
+                
+            });
 
             Button buttonCola = new Button();
             buttonCola.setText("Agregar a cola");
@@ -263,5 +269,9 @@ public class Controlador {
         }
 
         return listaCanciones;
+    }
+
+    private void eliminarCancion(int idCancion) {
+        cancionDao.eliminar(idCancion);
     }
 }
