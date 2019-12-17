@@ -256,7 +256,7 @@ public class Controlador {
             buttonEliminar.setOnAction(event -> {
                 eliminarCancion(cancion.getIdCancion());
                 InicioAdmin inicioAdmin = new InicioAdmin();
-                
+
             });
 
             Button buttonCola = new Button();
