@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class Compositor {
+    private int idCompositor;
     private String nombre;
     private String apellidos;
     private String pais;
@@ -15,6 +16,22 @@ public class Compositor {
     private String genero;
     private Button eliminar;
     private Button modificar;
+
+    public Compositor(int idCompositor, String nombre, String apellidos, String pais, int edad) {
+        this.idCompositor = idCompositor;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.pais = pais;
+        this.edad = edad;
+    }
+
+    public int getIdCompositor() {
+        return idCompositor;
+    }
+
+    public void setIdCompositor(int idCompositor) {
+        this.idCompositor = idCompositor;
+    }
 
     public Compositor(String nombre, String apellidos, String pais, int edad, String genero) {
         this.nombre = nombre;

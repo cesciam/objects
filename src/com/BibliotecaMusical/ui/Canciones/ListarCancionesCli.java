@@ -1,6 +1,7 @@
 package com.BibliotecaMusical.ui.Canciones;
 
 import com.BibliotecaMusical.bl.Cancion.Cancion;
+import com.BibliotecaMusical.bl.Usuario.Usuario;
 import com.BibliotecaMusical.tl.Controlador;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -65,6 +66,24 @@ public class ListarCancionesCli implements Initializable {
         Window window = scene.getWindow();
         Stage stage = (Stage) window;
         Parent root = FXMLLoader.load(getClass().getResource("../inicioCliente/inicioCliente.fxml"));
+        stage.setScene(new Scene(root));
+    }
+
+    public void cerrarSesion(ActionEvent actionEvent) throws IOException {
+        Usuario.getInstance().setTipo(null);
+        Usuario.getInstance().setNombreUsuario(null);
+        Usuario.getInstance().setNombre(null);
+        Usuario.getInstance().setTipo(null);
+        Usuario.getInstance().setImg(null);
+        Usuario.getInstance().setCorreo(null);
+        Usuario.getInstance().setContrasenna(null);
+        Usuario.getInstance().setIdUsuario(-1);
+
+
+        Scene scene = btnAgregarCancion.getScene();
+        Window window = scene.getWindow();
+        Stage stage = (Stage) window;
+        Parent root = FXMLLoader.load(getClass().getResource("/com/BibliotecaMusical/ui/InicioSesion/inicioSesion.fxml"));
         stage.setScene(new Scene(root));
     }
 }

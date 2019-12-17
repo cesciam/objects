@@ -12,7 +12,11 @@ public class Genero {
     private Button eliminar;
     private Button modificar;
 
-
+    public Genero(int id, String nombre, String descripcion) {
+        this.id = id;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+    }
 
     public Button getEliminar() {
         return eliminar;

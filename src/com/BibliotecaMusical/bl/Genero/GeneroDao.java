@@ -31,7 +31,7 @@ public class GeneroDao implements IGeneroDAO {
             ResultSet rs = connection.createStatement().executeQuery("select * from genero ");
 
             while (rs.next()){
-                Genero genero = new Genero(rs.getString("nombre"), rs.getString("descripcion"));
+                Genero genero = new Genero(rs.getInt("idgenero"), rs.getString("nombre"), rs.getString("descripcion"));
                 listaGenero.add(genero);
             }
 
@@ -51,6 +51,18 @@ public class GeneroDao implements IGeneroDAO {
 
             int res = ps.executeUpdate();
 
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void eliminar(int id) {
+        try {
+            Connection connection = getConnection();
+            PreparedStatement ps = connection.prepareStatement("delete from genero where idgenero = (?)");
+            ps.setInt(1, id);
+            ps.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }

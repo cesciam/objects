@@ -19,7 +19,7 @@
             <Button layoutX="14.0" layoutY="276.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="254.0" text="Albumnes" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
             <Button layoutX="14.0" layoutY="354.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="254.0" text="Tienda" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
             <Button layoutX="14.0" layoutY="432.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="254.0" text="Cola de reproducción" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
-            <Button layoutX="14.0" layoutY="510.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="254.0" text="Cerrar sesión" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+            <Button layoutX="14.0" layoutY="510.0" mnemonicParsing="false" onAction="#cerrarSesion" prefHeight="61.0" prefWidth="254.0" text="Cerrar sesión" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
          </children>
       </AnchorPane>
       <Label layoutX="337.0" layoutY="113.0" text="Lista de reproducción:" />

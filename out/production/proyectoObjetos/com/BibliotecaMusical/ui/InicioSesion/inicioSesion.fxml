@@ -8,11 +8,12 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="266.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.BibliotecaMusical.ui.InicioSesion.inicioSesion">
    <children>
-      <Button layoutX="246.0" layoutY="176.0" mnemonicParsing="false" onAction="#iniciarSesion" text="Iniciar sesión" />
+      <Button fx:id="btn_iniciarSesion" layoutX="246.0" layoutY="176.0" mnemonicParsing="false" onAction="#iniciarSesion" text="Iniciar sesión" />
       <TextField fx:id="txtUserName" layoutX="140.0" layoutY="60.0" />
       <Label layoutX="21.0" layoutY="60.0" text="Nombre de usuario" />
       <Label layoutX="21.0" layoutY="108.0" text="Contraseña" />
       <Button fx:id="btnRegistro" layoutX="86.0" layoutY="176.0" mnemonicParsing="false" onAction="#registroCliente" text="Registrarse" />
       <PasswordField fx:id="txtPass" layoutX="140.0" layoutY="104.0" />
+      <Button fx:id="btnRegistroAdmin" layoutX="21.0" layoutY="220.0" mnemonicParsing="false" onAction="#registrarAdministrador" prefHeight="25.0" prefWidth="149.0" text="Registrar administrador" visible="false" />
    </children>
 </Pane>

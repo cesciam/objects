@@ -21,7 +21,7 @@ public class CompositorDao implements ICompositorDao{
             ResultSet rs = connection.createStatement().executeQuery("select * from compositor ");
 
             while (rs.next()){
-                Compositor compositor = new Compositor(rs.getString("nombre"), rs.getString("apellidos"), rs.getString("pais"), rs.getInt("edad"));
+                Compositor compositor = new Compositor(rs.getInt("idcompositor"), rs.getString("nombre"), rs.getString("apellidos"), rs.getString("pais"), rs.getInt("edad"));
                 listaCompositor.add(compositor);
             }
 
@@ -48,5 +48,19 @@ public class CompositorDao implements ICompositorDao{
             e.printStackTrace();
 
         }
+    }
+
+    @Override
+    public void eliminar(int idCompositor) {
+
+        try {
+            Connection connection = getConnection();
+            PreparedStatement ps = connection.prepareStatement("delete from compositor where idCompositor = (?)");
+            ps.setInt(1, idCompositor);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 }

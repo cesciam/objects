@@ -43,7 +43,7 @@ public class Controlador {
         compositorDao = factory.getCompositorDao();
     }
 
-    public void registrarCliente(String nombre, String apellidos, String nombreUsuario, String contrasenna, String edad, String pais, String email, String identificacion, String pathImg) {
+        public void registrarCliente(String nombre, String apellidos, String nombreUsuario, String contrasenna, String edad, String pais, String email, String identificacion, String pathImg) {
         try {
             int edadCliente = Integer.parseInt(edad);
             int identificacionCliente = Integer.parseInt(identificacion);
@@ -98,6 +98,9 @@ public class Controlador {
         for (Genero genero: generos){
             Button eliminar = new Button();
             eliminar.setText("Eliminar");
+            eliminar.setOnAction(event -> {
+                eliminarGenero(genero.getId());
+            });
 
             Button modificar = new Button();
             modificar.setText("Modificar");
@@ -111,6 +114,10 @@ public class Controlador {
         return listaGeneros;
     }
 
+    private void eliminarGenero(int id) {
+        generoDAO.eliminar(id);
+    }
+
     public ObservableList<Artista> listaArtistas() {
         ObservableList<Artista> listaArtistas = FXCollections.observableArrayList();
         ArrayList<Artista> artistas = artistaDao.listar();
@@ -119,6 +126,9 @@ public class Controlador {
 
             Button eliminar = new Button();
             eliminar.setText("Eliminar");
+            eliminar.setOnAction(event -> {
+                eliminarArtista(artista.getId());
+            });
 
             Button modificar = new Button();
             modificar.setText("Modificar");
@@ -129,6 +139,10 @@ public class Controlador {
         }
 
         return listaArtistas;
+    }
+
+    private void eliminarArtista(int id) {
+        artistaDao.eliminar(id);
     }
 
     public void registrarCancion(String nombre, String pathCancion, LocalDate fechaLanzamiento, int calificacion, Genero genero, Compositor compositor, Artista artista) {
@@ -144,6 +158,9 @@ public class Controlador {
         for (Compositor compositor: compositors){
             Button eliminar = new Button();
             eliminar.setText("Eliminar");
+            eliminar.setOnAction(event -> {
+                eliminarCompositor(compositor.getIdCompositor());
+            });
 
             Button modificar = new Button();
             modificar.setText("Modificar");
@@ -154,6 +171,10 @@ public class Controlador {
         }
 
         return listaCompositor;
+    }
+
+    private void eliminarCompositor(int idCompositor) {
+        compositorDao.eliminar(idCompositor);
     }
 
 

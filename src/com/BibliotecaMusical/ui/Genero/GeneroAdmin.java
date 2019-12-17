@@ -1,6 +1,7 @@
 package com.BibliotecaMusical.ui.Genero;
 
 import com.BibliotecaMusical.bl.Genero.Genero;
+import com.BibliotecaMusical.bl.Usuario.Usuario;
 import com.BibliotecaMusical.tl.Controlador;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,6 +14,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 
 import java.io.IOException;
 
@@ -43,5 +45,57 @@ public class GeneroAdmin {
 
         tableGeneros.setItems(genList);
 
+    }
+
+    public void iniciioAdmin(ActionEvent actionEvent) throws IOException {
+
+        Scene scene = btn_registraGenero.getScene();
+        Window window = scene.getWindow();
+        Stage stage = (Stage) window;
+        Parent root = FXMLLoader.load(getClass().getResource("../inicioAdmin/inicioAdmin.fxml"));
+        stage.setScene(new Scene(root));
+    }
+
+    public void cerrarSesion(ActionEvent actionEvent) throws IOException {
+        Usuario.getInstance().setTipo(null);
+        Usuario.getInstance().setNombreUsuario(null);
+        Usuario.getInstance().setNombre(null);
+        Usuario.getInstance().setTipo(null);
+        Usuario.getInstance().setImg(null);
+        Usuario.getInstance().setCorreo(null);
+        Usuario.getInstance().setContrasenna(null);
+        Usuario.getInstance().setIdUsuario(-1);
+
+
+        Scene scene = btn_registraGenero.getScene();
+        Window window = scene.getWindow();
+        Stage stage = (Stage) window;
+        Parent root = FXMLLoader.load(getClass().getResource("/com/BibliotecaMusical/ui/InicioSesion/inicioSesion.fxml"));
+        stage.setScene(new Scene(root));
+    }
+
+    public void generos(ActionEvent actionEvent) throws IOException {
+        Scene scene = btn_registraGenero.getScene();
+        Window window = scene.getWindow();
+        Stage stage = (Stage) window;
+        Parent root = FXMLLoader.load(getClass().getResource("../Genero/generoAdmin.fxml"));
+        stage.setScene(new Scene(root));
+    }
+
+    public void compositores(ActionEvent actionEvent) throws IOException {
+
+        Scene scene = btn_registraGenero.getScene();
+        Window window = scene.getWindow();
+        Stage stage = (Stage) window;
+        Parent root = FXMLLoader.load(getClass().getResource("../Compositor/CompositorAdmin.fxml"));
+        stage.setScene(new Scene(root));
+    }
+
+    public void artistas(ActionEvent actionEvent) throws IOException {
+        Scene scene = btn_registraGenero.getScene();
+        Window window = scene.getWindow();
+        Stage stage = (Stage) window;
+        Parent root = FXMLLoader.load(getClass().getResource("../Artista/ArtistaAdmin.fxml"));
+        stage.setScene(new Scene(root));
     }
 }

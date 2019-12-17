@@ -1,5 +1,6 @@
 package com.BibliotecaMusical.ui.inicioAdmin;
 
+import com.BibliotecaMusical.bl.Usuario.Usuario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -35,6 +36,25 @@ public class InicioAdmin {
         Window window = scene.getWindow();
         Stage stage = (Stage) window;
         Parent root = FXMLLoader.load(getClass().getResource("../Artista/ArtistaAdmin.fxml"));
+        stage.setScene(new Scene(root));
+    }
+
+    public void cerrarSesion(ActionEvent actionEvent) throws IOException {
+
+        Usuario.getInstance().setTipo(null);
+        Usuario.getInstance().setNombreUsuario(null);
+        Usuario.getInstance().setNombre(null);
+        Usuario.getInstance().setTipo(null);
+        Usuario.getInstance().setImg(null);
+        Usuario.getInstance().setCorreo(null);
+        Usuario.getInstance().setContrasenna(null);
+        Usuario.getInstance().setIdUsuario(-1);
+
+
+        Scene scene = btn_genero.getScene();
+        Window window = scene.getWindow();
+        Stage stage = (Stage) window;
+        Parent root = FXMLLoader.load(getClass().getResource("/com/BibliotecaMusical/ui/InicioSesion/inicioSesion.fxml"));
         stage.setScene(new Scene(root));
     }
 }

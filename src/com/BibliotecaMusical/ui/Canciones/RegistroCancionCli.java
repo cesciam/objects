@@ -3,6 +3,7 @@ package com.BibliotecaMusical.ui.Canciones;
 import com.BibliotecaMusical.bl.Artista.Artista;
 import com.BibliotecaMusical.bl.Compositor.Compositor;
 import com.BibliotecaMusical.bl.Genero.Genero;
+import com.BibliotecaMusical.bl.Usuario.Usuario;
 import com.BibliotecaMusical.tl.Controlador;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -141,5 +142,23 @@ public class RegistroCancionCli {
         stage.setTitle("Biblioteca Musical");
         stage.setScene(new Scene(root));
         stage.show();
+    }
+
+    public void cerrarSesion(ActionEvent actionEvent) throws IOException {
+        Usuario.getInstance().setTipo(null);
+        Usuario.getInstance().setNombreUsuario(null);
+        Usuario.getInstance().setNombre(null);
+        Usuario.getInstance().setTipo(null);
+        Usuario.getInstance().setImg(null);
+        Usuario.getInstance().setCorreo(null);
+        Usuario.getInstance().setContrasenna(null);
+        Usuario.getInstance().setIdUsuario(-1);
+
+
+        Scene scene = dp_fecha.getScene();
+        Window window = scene.getWindow();
+        Stage stage = (Stage) window;
+        Parent root = FXMLLoader.load(getClass().getResource("/com/BibliotecaMusical/ui/InicioSesion/inicioSesion.fxml"));
+        stage.setScene(new Scene(root));
     }
 }

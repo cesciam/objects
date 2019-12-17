@@ -7,4 +7,6 @@ public interface ICompositorDao {
     ArrayList<Compositor> listar();
 
     void registrarCompositor(Compositor compositor);
+
+    void eliminar(int idCompositor);
 }

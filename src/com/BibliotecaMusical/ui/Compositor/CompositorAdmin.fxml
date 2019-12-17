@@ -14,14 +14,14 @@
             <Blend />
          </effect>
          <children>
-            <Button layoutX="14.0" layoutY="29.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="254.0" text="Canciones" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+            <Button layoutX="14.0" layoutY="29.0" mnemonicParsing="false" onAction="#inicioCliente" prefHeight="61.0" prefWidth="254.0" text="Canciones" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
             <Button layoutX="14.0" layoutY="107.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="254.0" text="Listas de reproducción" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
             <Button layoutX="14.0" layoutY="185.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="254.0" text="Albumnes" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
             <Button layoutX="14.0" layoutY="263.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="254.0" text="Tienda" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
-            <Button layoutX="14.0" layoutY="341.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="254.0" text="Genero" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+            <Button layoutX="14.0" layoutY="341.0" mnemonicParsing="false" onAction="#generos" prefHeight="61.0" prefWidth="254.0" text="Genero" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
             <Button layoutX="14.0" layoutY="419.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="254.0" text="Compositor" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
-            <Button layoutY="497.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="254.0" text="Artista" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
-            <Button layoutY="575.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="254.0" text="Cerrar sesión" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+            <Button layoutY="497.0" mnemonicParsing="false" onAction="#artistas" prefHeight="61.0" prefWidth="254.0" text="Artista" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+            <Button layoutY="575.0" mnemonicParsing="false" onAction="#cerrarSesion" prefHeight="61.0" prefWidth="254.0" text="Cerrar sesión" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
          </children>
       </AnchorPane>
       <TableView fx:id="tableGCompositores" layoutX="325.0" layoutY="206.0" prefHeight="398.0" prefWidth="605.0">

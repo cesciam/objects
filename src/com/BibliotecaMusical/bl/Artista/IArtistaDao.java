@@ -6,4 +6,6 @@ public interface IArtistaDao<T> {
 
     void registrar(T t);
     ArrayList<Artista> listar();
+
+    void eliminar(int id);
 }

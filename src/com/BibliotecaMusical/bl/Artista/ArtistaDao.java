@@ -53,4 +53,16 @@ public class ArtistaDao implements IArtistaDao {
         }
         return listaArtistas;
     }
+
+    @Override
+    public void eliminar(int id) {
+        try {
+            Connection connection = getConnection();
+            PreparedStatement ps = connection.prepareStatement("delete from artista where idartista = (?)");
+            ps.setInt(1, id);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
