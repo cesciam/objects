@@ -49,7 +49,7 @@ public class CompositorAdmin {
         Scene scene = tableGCompositores.getScene();
         Window window = scene.getWindow();
         Stage stage = (Stage) window;
-        Parent root = FXMLLoader.load(getClass().getResource("../inicioCliente/inicioCliente.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../inicioAdmin/inicioAdmin.fxml.fxml"));
         stage.setScene(new Scene(root));
     }
 

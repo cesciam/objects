@@ -243,4 +243,25 @@ public class Controlador {
         compositorDao.registrarCompositor(compositor);
 
     }
+
+    public ObservableList<Cancion> listarCanciones() throws SQLException {
+
+        ObservableList<Cancion> listaCanciones = FXCollections.observableArrayList();
+        ArrayList<Cancion> cancions =cancionDao.listarCanciones();
+
+        for (Cancion cancion: cancions){
+            Button buttonEliminar = new Button();
+            buttonEliminar.setText("Eliminar");
+
+            Button buttonCola = new Button();
+            buttonCola.setText("Agregar a cola");
+
+            cancion.setEliminar(buttonEliminar);
+            cancion.setAgregarCola(buttonCola);
+
+            listaCanciones.add(cancion);
+        }
+
+        return listaCanciones;
+    }
 }

@@ -70,4 +70,17 @@ public class CancionDao implements ICancionDao {
             e.printStackTrace();
         }
     }
+
+    @Override
+    public ArrayList<Cancion> listarCanciones() throws SQLException {
+        ArrayList<Cancion> cancions = new ArrayList<>();
+        Connection connection = getConnection();
+        ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM cancion  ");
+        while (rs.next()){
+            Cancion cancion = new Cancion(rs.getInt("idcancion"), rs.getString("nombre"), rs.getString("pathCancion"), rs.getDate("fechaLanzamiento").toLocalDate(), rs.getInt("calificacion"), new Genero(rs.getString("genero")), new Compositor(rs.getString("compositor")), new Artista(rs.getString("artista")));
+            cancions.add(cancion);
+        }
+
+        return cancions;
+    }
 }

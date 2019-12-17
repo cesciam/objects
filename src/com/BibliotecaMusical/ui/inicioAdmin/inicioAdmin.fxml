@@ -35,6 +35,8 @@
                   <TableColumn fx:id="col_btnAgregar" prefWidth="109.0" text="Agregar" />
                </columns>
             </TableView>
+            <Button layoutX="873.0" layoutY="90.0" mnemonicParsing="false" onAction="#actualizarTabla" text="Actualizar" />
+            <Button layoutX="637.0" layoutY="90.0" mnemonicParsing="false" onAction="#registrarCancion" text="Registrar" />
          </children>
       </AnchorPane>
    </children>
